@@ -17,6 +17,7 @@ qt_add_executable(widget
 qt_add_translations(
     TARGETS widget
     TS_FILES widget_zh_CN.ts
+    TS_FILES widget_en_US.ts
 )
 
 target_link_libraries(widget
