@@ -2,5 +2,6 @@
 /build/
 /cmake-build-*
 CMakeLists.txt.user
+widget.pro.user
 widget_en_US.qm
 widget_zh_CN.qm

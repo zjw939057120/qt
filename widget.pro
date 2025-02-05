@@ -18,6 +18,9 @@ HEADERS += \
 FORMS += \
     mainwindow.ui
 
+RESOURCES += resources.qrc
+RC_FILE = resource.rc
+
 TRANSLATIONS += \
     widget_zh_CN.ts \
     widget_en_US.ts
