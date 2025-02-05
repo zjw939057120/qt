@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 3.19)
 project(widget LANGUAGES CXX)
 
-set(CMAKE_PREFIX_PATH  "D:/Qt/6.8.2/mingw_64/lib/cmake")
 find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets LinguistTools)
 
 qt_standard_project_setup()
