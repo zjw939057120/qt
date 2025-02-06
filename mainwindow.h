@@ -17,6 +17,8 @@ public:
 
     ~MainWindow();
 
+    void init();
+
     void changeLanguage(const QString &lang);
 
 private slots:
