@@ -10,13 +10,25 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    aboutwindow.cpp \
+    queuesettingwindow.cpp \
+    manualwindow.cpp \
+    faqwindow.cpp \
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    aboutwindow.h \
+    queuesettingwindow.h \
+    manualwindow.h \
+    faqwindow.h \
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    aboutwindow.ui \
+    queuesettingwindow.ui \
+    manualwindow.ui \
+    faqwindow.ui \
 
 RESOURCES += resources.qrc
 RC_FILE = resource.rc

@@ -2,6 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "queuesettingwindow.h"
+#include "manualwindow.h"
+#include "faqwindow.h"
+#include "aboutwindow.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -49,10 +53,16 @@ private slots:
 
     void on_actionFAQ_triggered();
 
-    void on_actionVersion_triggered();
+    void on_actionAbout_triggered();
 
 private:
     Ui::MainWindow *ui;
+
+public:
+    QueueSettingWindow *m_QueueSettingWindow;
+    ManualWindow *m_ManualWindow;
+    FAQWindow *m_FAQWindow;
+    AboutWindow *m_AboutWindow;
 };
 
 #endif // MAINWINDOW_H

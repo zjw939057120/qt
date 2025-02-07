@@ -75,16 +75,19 @@ void MainWindow::on_actionRevise_triggered() {
 void MainWindow::on_actionManual_triggered() {
     qDebug() << __FUNCTION__;
     ui->stackedWidget->setCurrentWidget(ui->page_Manual);
+    m_ManualWindow->show();
 }
 
 void MainWindow::on_actionFAQ_triggered() {
     qDebug() << __FUNCTION__;
     ui->stackedWidget->setCurrentWidget(ui->page_FAQ);
+    m_FAQWindow->show();
 }
 
-void MainWindow::on_actionVersion_triggered() {
+void MainWindow::on_actionAbout_triggered() {
     qDebug() << __FUNCTION__;
-    ui->stackedWidget->setCurrentWidget(ui->page_Version);
+    ui->stackedWidget->setCurrentWidget(ui->page_About);
+    m_AboutWindow->show();
 }
 
 void MainWindow::changeLanguage(const QString &lang) {
@@ -98,5 +101,9 @@ void MainWindow::changeLanguage(const QString &lang) {
 
 void MainWindow::init() {
     ui->stackedWidget->setCurrentWidget(ui->page_Main);
+    m_QueueSettingWindow = new QueueSettingWindow(this);
+    m_ManualWindow = new ManualWindow(this);
+    m_FAQWindow = new FAQWindow(this);
+    m_AboutWindow = new AboutWindow(this);
 }
 

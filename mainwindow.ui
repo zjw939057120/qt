@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>9</number>
+     <number>12</number>
     </property>
     <widget class="QWidget" name="page_Main">
      <widget class="QLabel" name="label_Main">
@@ -92,8 +92,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>81</width>
-        <height>16</height>
+        <width>100</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="text">
@@ -206,8 +206,8 @@
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_Version">
-     <widget class="QLabel" name="label_Version">
+    <widget class="QWidget" name="page_About">
+     <widget class="QLabel" name="label_About">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -217,7 +217,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>page_Version</string>
+       <string>page_About</string>
       </property>
      </widget>
     </widget>
@@ -270,7 +270,7 @@
     </property>
     <addaction name="actionManual"/>
     <addaction name="actionFAQ"/>
-    <addaction name="actionVersion"/>
+    <addaction name="actionAbout"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
@@ -333,9 +333,9 @@
     <string>FAQ</string>
    </property>
   </action>
-  <action name="actionVersion">
+  <action name="actionAbout">
    <property name="text">
-    <string>Version</string>
+    <string>About</string>
    </property>
   </action>
   <action name="actionEnglish">

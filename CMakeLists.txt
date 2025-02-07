@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.19)
 project(widget LANGUAGES CXX)
 
-set(CMAKE_PREFIX_PATH  "D:/Qt/6.8.2/mingw_64/lib/cmake")
+set(CMAKE_PREFIX_PATH "D:/Qt/6.8.2/mingw_64/lib/cmake")
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
@@ -16,6 +16,23 @@ qt_add_executable(widget
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
+
+        aboutwindow.cpp
+        aboutwindow.h
+        aboutwindow.ui
+
+        queuesettingwindow.cpp
+        queuesettingwindow.h
+        queuesettingwindow.ui
+
+        manualwindow.cpp
+        manualwindow.h
+        manualwindow.ui
+
+        faqwindow.cpp
+        faqwindow.h
+        faqwindow.ui
+
         resources.qrc
         resource.rc
         )
