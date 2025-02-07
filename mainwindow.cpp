@@ -1,6 +1,7 @@
 #include <QTranslator>
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "manualdialog.h"
 #include <QApplication>
 #include <QLocale>
 #include <QTranslator>
@@ -19,22 +20,22 @@ MainWindow::~MainWindow() {
 
 void MainWindow::on_actionMethod_triggered() {
     qDebug() << __FUNCTION__;
-    ui->stackedWidget->setCurrentWidget(ui->page_Method);
+    m_MethodDialog->show();
 }
 
 void MainWindow::on_actionQueue_triggered() {
     qDebug() << __FUNCTION__;
-    ui->stackedWidget->setCurrentWidget(ui->page_Queue);
+    m_QueueDialog->show();
 }
 
 void MainWindow::on_actionSample_triggered() {
     qDebug() << __FUNCTION__;
-    ui->stackedWidget->setCurrentWidget(ui->page_Sample);
+    m_SampleDialog->show();
 }
 
 void MainWindow::on_actionRecord_triggered() {
     qDebug() << __FUNCTION__;
-    ui->stackedWidget->setCurrentWidget(ui->page_Record);
+    m_RecordDialog->show();
 }
 
 void MainWindow::on_actionQuit_triggered() {
@@ -44,66 +45,74 @@ void MainWindow::on_actionQuit_triggered() {
 
 void MainWindow::on_actionCut_triggered() {
     qDebug() << __FUNCTION__;
-    ui->stackedWidget->setCurrentWidget(ui->page_Cut);
 }
 
 void MainWindow::on_actionCopy_triggered() {
     qDebug() << __FUNCTION__;
-    ui->stackedWidget->setCurrentWidget(ui->page_Copy);
 }
 
 void MainWindow::on_actionPaste_triggered() {
     qDebug() << __FUNCTION__;
-    ui->stackedWidget->setCurrentWidget(ui->page_Paste);
 }
 
 void MainWindow::on_actionEnglish_triggered() {
     qDebug() << __FUNCTION__;
-    changeLanguage("en_US");
+    retranslateUi("en_US");
 }
 
 void MainWindow::on_actionChinese_triggered() {
     qDebug() << __FUNCTION__;
-    changeLanguage("zh_CN");
+    retranslateUi("zh_CN");
 }
 
 void MainWindow::on_actionRevise_triggered() {
     qDebug() << __FUNCTION__;
-    ui->stackedWidget->setCurrentWidget(ui->page_Revise);
+    m_ReviseDialog->show();
 }
 
 void MainWindow::on_actionManual_triggered() {
     qDebug() << __FUNCTION__;
-    ui->stackedWidget->setCurrentWidget(ui->page_Manual);
-    m_ManualWindow->show();
+    m_ManualDialog->show();
 }
 
 void MainWindow::on_actionFAQ_triggered() {
     qDebug() << __FUNCTION__;
-    ui->stackedWidget->setCurrentWidget(ui->page_FAQ);
-    m_FAQWindow->show();
+    m_FAQDialog->show();
 }
 
 void MainWindow::on_actionAbout_triggered() {
     qDebug() << __FUNCTION__;
-    ui->stackedWidget->setCurrentWidget(ui->page_About);
-    m_AboutWindow->show();
+    m_AboutDialog->show();
 }
 
-void MainWindow::changeLanguage(const QString &lang) {
+void MainWindow::retranslateUi(const QString &lang) {
     QTranslator translator;
     if (translator.load(":/i18n/widget_" + lang)) {
         qDebug() << __FUNCTION__;
         qApp->installTranslator(&translator);
         ui->retranslateUi(this);
+        m_AboutDialog->retranslateUi();
+        m_FAQDialog->retranslateUi();
+        m_ManualDialog->retranslateUi();
+        m_MethodDialog->retranslateUi();
+        m_QueueDialog->retranslateUi();
+        m_QueueSettingDialog->retranslateUi();
+        m_RecordDialog->retranslateUi();
+        m_ReviseDialog->retranslateUi();
+        m_SampleDialog->retranslateUi();
     }
 }
 
 void MainWindow::init() {
-    ui->stackedWidget->setCurrentWidget(ui->page_Main);
-    m_QueueSettingWindow = new QueueSettingWindow(this);
-    m_ManualWindow = new ManualWindow(this);
-    m_FAQWindow = new FAQWindow(this);
-    m_AboutWindow = new AboutWindow(this);
+    m_AboutDialog = new AboutDialog(this);
+    m_FAQDialog = new FAQDialog(this);
+    m_ManualDialog = new ManualDialog(this);
+    m_MethodDialog = new MethodDialog(this);
+    m_QueueDialog = new QueueDialog(this);
+    m_QueueSettingDialog = new QueueSettingDialog(this);
+    m_RecordDialog = new RecordDialog(this);
+    m_ReviseDialog = new ReviseDialog(this);
+    m_ReviseDialog = new ReviseDialog(this);
+    m_SampleDialog = new SampleDialog(this);
 }
 

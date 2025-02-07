@@ -2,10 +2,15 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "queuesettingwindow.h"
-#include "manualwindow.h"
-#include "faqwindow.h"
-#include "aboutwindow.h"
+#include "aboutdialog.h"
+#include "faqdialog.h"
+#include "manualdialog.h"
+#include "methoddialog.h"
+#include "queuedialog.h"
+#include "queuesettingdialog.h"
+#include "recorddialog.h"
+#include "revisedialog.h"
+#include "sampledialog.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -23,7 +28,7 @@ public:
 
     void init();
 
-    void changeLanguage(const QString &lang);
+    void retranslateUi(const QString &lang);
 
 private slots:
 
@@ -59,10 +64,15 @@ private:
     Ui::MainWindow *ui;
 
 public:
-    QueueSettingWindow *m_QueueSettingWindow;
-    ManualWindow *m_ManualWindow;
-    FAQWindow *m_FAQWindow;
-    AboutWindow *m_AboutWindow;
+    AboutDialog *m_AboutDialog;
+    FAQDialog *m_FAQDialog;
+    ManualDialog *m_ManualDialog;
+    MethodDialog *m_MethodDialog;
+    QueueDialog *m_QueueDialog;
+    QueueSettingDialog *m_QueueSettingDialog;
+    RecordDialog *m_RecordDialog;
+    ReviseDialog *m_ReviseDialog;
+    SampleDialog *m_SampleDialog;
 };
 
 #endif // MAINWINDOW_H

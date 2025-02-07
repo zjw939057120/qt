@@ -13,25 +13,46 @@ qt_standard_project_setup()
 qt_add_executable(widget
         WIN32 MACOSX_BUNDLE
         main.cpp
+
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
 
-        aboutwindow.cpp
-        aboutwindow.h
-        aboutwindow.ui
+        aboutdialog.cpp
+        aboutdialog.h
+        aboutdialog.ui
 
-        queuesettingwindow.cpp
-        queuesettingwindow.h
-        queuesettingwindow.ui
+        faqdialog.cpp
+        faqdialog.h
+        faqdialog.ui
 
-        manualwindow.cpp
-        manualwindow.h
-        manualwindow.ui
+        manualdialog.cpp
+        manualdialog.h
+        manualdialog.ui
 
-        faqwindow.cpp
-        faqwindow.h
-        faqwindow.ui
+        methoddialog.cpp
+        methoddialog.h
+        methoddialog.ui
+
+        queuedialog.cpp
+        queuedialog.h
+        queuedialog.ui
+
+        queuesettingdialog.cpp
+        queuesettingdialog.h
+        queuesettingdialog.ui
+
+        recorddialog.cpp
+        recorddialog.h
+        recorddialog.ui
+
+        revisedialog.cpp
+        revisedialog.h
+        revisedialog.ui
+
+        sampledialog.cpp
+        sampledialog.h
+        sampledialog.ui
 
         resources.qrc
         resource.rc

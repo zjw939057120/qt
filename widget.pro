@@ -11,24 +11,39 @@ CONFIG += c++17
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    aboutwindow.cpp \
-    queuesettingwindow.cpp \
-    manualwindow.cpp \
-    faqwindow.cpp \
+    aboutdialog.cpp \
+    faqdialog.cpp \
+    manualdialog.cpp \
+    methoddialog.cpp\
+    queuedialog.cpp \
+    queuesettingdialog.cpp \
+    recorddialog.cpp \
+    revisedialog.cpp \
+    sampledialog.cpp \
 
 HEADERS += \
     mainwindow.h \
-    aboutwindow.h \
-    queuesettingwindow.h \
-    manualwindow.h \
-    faqwindow.h \
+    aboutdialog.h \
+    faqdialog.h \
+    manualdialog.h \
+    methoddialog.h \
+    queuedialog.h \
+    queuesettingdialog.h \
+    recorddialog.h \
+    revisedialog.h \
+    sampledialog.h \
 
 FORMS += \
     mainwindow.ui \
-    aboutwindow.ui \
-    queuesettingwindow.ui \
-    manualwindow.ui \
-    faqwindow.ui \
+    aboutdialog.ui \
+    faqdialog.ui \
+    manualdialog.ui \
+    methoddialog.ui \
+    queuedialog.ui \
+    queuesettingdialog.ui \
+    recorddialog.ui \
+    revisedialog.ui \
+    sampledialog.ui \
 
 RESOURCES += resources.qrc
 RC_FILE = resource.rc

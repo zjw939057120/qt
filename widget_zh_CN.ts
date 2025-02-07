@@ -2,18 +2,18 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="zh_CN">
 <context>
-    <name>AboutWindow</name>
+    <name>AboutDialog</name>
     <message>
-        <location filename="aboutwindow.ui" line="14"/>
-        <source>AboutWindow</source>
+        <location filename="aboutdialog.ui" line="14"/>
+        <source>AboutDialog</source>
         <translation>关于</translation>
     </message>
 </context>
 <context>
-    <name>FAQWindow</name>
+    <name>FAQDialog</name>
     <message>
-        <location filename="faqwindow.ui" line="14"/>
-        <source>FAQWindow</source>
+        <location filename="faqdialog.ui" line="14"/>
+        <source>FAQDialog</source>
         <translation>常见问题</translation>
     </message>
 </context>
@@ -25,185 +25,155 @@
         <translation>主窗口</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="40"/>
-        <source>page_Main</source>
-        <translation>页面_首页</translation>
-    </message>
-    <message>
-        <location filename="mainwindow.ui" line="55"/>
-        <source>page_Method</source>
-        <translation>页面_方法</translation>
-    </message>
-    <message>
-        <location filename="mainwindow.ui" line="70"/>
-        <source>page_Queue</source>
-        <translation>页面_队列</translation>
-    </message>
-    <message>
-        <location filename="mainwindow.ui" line="85"/>
-        <source>page_Sample</source>
-        <translation>页面_样本</translation>
-    </message>
-    <message>
-        <location filename="mainwindow.ui" line="100"/>
-        <source>page_Record</source>
-        <translation>页面_记录</translation>
-    </message>
-    <message>
-        <location filename="mainwindow.ui" line="115"/>
-        <source>page_Quit</source>
-        <translation>页面_退出</translation>
-    </message>
-    <message>
-        <location filename="mainwindow.ui" line="130"/>
-        <source>page_Copy</source>
-        <translation>页面_复制</translation>
-    </message>
-    <message>
-        <location filename="mainwindow.ui" line="145"/>
-        <source>page_Cut</source>
-        <translation>页面_剪切</translation>
-    </message>
-    <message>
-        <location filename="mainwindow.ui" line="160"/>
-        <source>page_Paste</source>
-        <translation>页面_粘贴</translation>
-    </message>
-    <message>
-        <location filename="mainwindow.ui" line="175"/>
-        <source>page_Revise</source>
-        <translation>页面_校正</translation>
-    </message>
-    <message>
-        <location filename="mainwindow.ui" line="190"/>
-        <source>page_FAQ</source>
-        <translation>页面_常见问题</translation>
-    </message>
-    <message>
-        <location filename="mainwindow.ui" line="205"/>
-        <source>page_Manual</source>
-        <translation>页面_手册</translation>
-    </message>
-    <message>
-        <location filename="mainwindow.ui" line="220"/>
-        <source>page_About</source>
-        <oldsource>page_Version</oldsource>
-        <translation>页面_关于</translation>
-    </message>
-    <message>
-        <location filename="mainwindow.ui" line="237"/>
+        <location filename="mainwindow.ui" line="28"/>
         <source>File</source>
         <translation>文件</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="247"/>
+        <location filename="mainwindow.ui" line="38"/>
         <source>Edit</source>
         <translation>编辑</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="255"/>
+        <location filename="mainwindow.ui" line="46"/>
         <source>Setting</source>
         <translation>设置</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="259"/>
+        <location filename="mainwindow.ui" line="50"/>
         <source>Language</source>
         <translation>语言</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="269"/>
+        <location filename="mainwindow.ui" line="60"/>
         <source>Help</source>
         <translation>帮助</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="283"/>
+        <location filename="mainwindow.ui" line="74"/>
         <source>Method</source>
         <translation>方法</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="288"/>
+        <location filename="mainwindow.ui" line="79"/>
         <source>Queue</source>
         <translation>队列</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="293"/>
+        <location filename="mainwindow.ui" line="84"/>
         <source>Sample</source>
         <translation>样品</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="298"/>
+        <location filename="mainwindow.ui" line="89"/>
         <source>Record</source>
         <translation>记录</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="303"/>
+        <location filename="mainwindow.ui" line="94"/>
         <source>Quit</source>
         <translation>退出</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="308"/>
+        <location filename="mainwindow.ui" line="99"/>
         <source>Cut</source>
         <translation>剪切</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="313"/>
+        <location filename="mainwindow.ui" line="104"/>
         <source>Copy</source>
         <translation>复制</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="318"/>
+        <location filename="mainwindow.ui" line="109"/>
         <source>Paste</source>
         <translation>粘贴</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="323"/>
+        <location filename="mainwindow.ui" line="114"/>
         <source>Revise</source>
         <translation>校正</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="328"/>
+        <location filename="mainwindow.ui" line="119"/>
         <source>Manual</source>
         <translation>手册</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="333"/>
+        <location filename="mainwindow.ui" line="124"/>
         <source>FAQ</source>
         <translation>常见问题</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="338"/>
+        <location filename="mainwindow.ui" line="129"/>
         <source>About</source>
         <translation>关于</translation>
     </message>
     <message>
-        <source>Version</source>
-        <translation type="vanished">版本</translation>
-    </message>
-    <message>
-        <location filename="mainwindow.ui" line="343"/>
+        <location filename="mainwindow.ui" line="134"/>
         <source>English</source>
         <translation>英语</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="348"/>
+        <location filename="mainwindow.ui" line="139"/>
         <source>Chinese</source>
         <translation>中文</translation>
     </message>
 </context>
 <context>
-    <name>ManualWindow</name>
+    <name>ManualDialog</name>
     <message>
-        <location filename="manualwindow.ui" line="14"/>
-        <source>ManualWindow</source>
+        <location filename="manualdialog.ui" line="14"/>
+        <source>ManualDialog</source>
         <translation>手册</translation>
     </message>
 </context>
 <context>
-    <name>QueueSettingWindow</name>
+    <name>MethodDialog</name>
     <message>
-        <location filename="queuesettingwindow.ui" line="14"/>
-        <source>QueueSettingWindow</source>
+        <location filename="methoddialog.ui" line="14"/>
+        <source>MethodDialog</source>
+        <translation>方法管理</translation>
+    </message>
+</context>
+<context>
+    <name>QueueDialog</name>
+    <message>
+        <location filename="queuedialog.ui" line="14"/>
+        <source>QueueDialog</source>
+        <translation>队列管理</translation>
+    </message>
+</context>
+<context>
+    <name>QueueSettingDialog</name>
+    <message>
+        <location filename="queuesettingdialog.ui" line="14"/>
+        <source>QueueSettingDialog</source>
         <translation>队列设置</translation>
+    </message>
+</context>
+<context>
+    <name>RecordDialog</name>
+    <message>
+        <location filename="recorddialog.ui" line="14"/>
+        <source>RecordDialog</source>
+        <translation>记录</translation>
+    </message>
+</context>
+<context>
+    <name>ReviseDialog</name>
+    <message>
+        <location filename="revisedialog.ui" line="14"/>
+        <source>ReviseDialog</source>
+        <translation>校正</translation>
+    </message>
+</context>
+<context>
+    <name>SampleDialog</name>
+    <message>
+        <location filename="sampledialog.ui" line="14"/>
+        <source>SampleDialog</source>
+        <translation>样本</translation>
     </message>
 </context>
 </TS>
