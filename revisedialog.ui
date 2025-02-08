@@ -13,6 +13,292 @@
   <property name="windowTitle">
    <string>ReviseDialog</string>
   </property>
+  <widget class="QWidget" name="formLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout_InjectorType">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_InjectorType">
+      <property name="text">
+       <string>InjectorType</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QComboBox" name="comboBox_InjectorType"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="formLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>20</y>
+     <width>191</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout_Coordinates">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_Coordinates">
+      <property name="text">
+       <string>Coordinates</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QComboBox" name="comboBox_Coordinates"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>20</y>
+     <width>324</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="pushButton_ReviseCoordinates">
+      <property name="text">
+       <string>ReviseCoordinates</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_SettingParameter">
+      <property name="text">
+       <string>SettingParameter</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_ReadData">
+      <property name="text">
+       <string>ReadData</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget_Parameter">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>60</y>
+     <width>261</width>
+     <height>491</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget_Axis">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>60</y>
+     <width>511</width>
+     <height>401</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QWidget" name="formLayoutWidget_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>560</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout_X">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_X">
+      <property name="text">
+       <string>X-axis</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="lineEdit_X"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="formLayoutWidget_4">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>560</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout_Y">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_Y">
+      <property name="text">
+       <string>Y-axis</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="lineEdit_Y"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="formLayoutWidget_5">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>560</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout_Z">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_Z">
+      <property name="text">
+       <string>Z-axis</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="lineEdit_Z"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="formLayoutWidget_6">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>560</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout_Z1">
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="lineEdit_Z1"/>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_Z1">
+      <property name="text">
+       <string>Z1-axis</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="formLayoutWidget_7">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>470</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout_X_S">
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="lineEdit_X_S"/>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_X_S">
+      <property name="text">
+       <string>X-axis</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="formLayoutWidget_8">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>470</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout_Y_S">
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="lineEdit_Y_S"/>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_Y_S">
+      <property name="text">
+       <string>Y-axis</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="formLayoutWidget_9">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>510</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout_Z_S">
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="lineEdit_Z_S"/>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_Z_S">
+      <property name="text">
+       <string>Z-axis</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="formLayoutWidget_10">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>510</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout_Z1_S">
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="lineEdit_Z1_S"/>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_Z1_S">
+      <property name="text">
+       <string>Z1-axis</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="pushButton_SingleStep">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>490</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>SingleStep</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
