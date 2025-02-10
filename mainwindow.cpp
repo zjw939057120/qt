@@ -9,7 +9,6 @@
 MainWindow::MainWindow(QWidget *parent)
         : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
-
     init();
 }
 
@@ -109,7 +108,7 @@ void MainWindow::init() {
     m_ManualDialog = new ManualDialog(this);
     m_MethodDialog = new MethodDialog(this);
     m_QueueDialog = new QueueDialog(this);
-    m_QueueSettingDialog = new QueueSettingDialog(this);
+    m_QueueSettingDialog = new QueueSettingDialog(m_QueueDialog);
     m_RecordDialog = new RecordDialog(this);
     m_ReviseDialog = new ReviseDialog(this);
     m_ReviseDialog = new ReviseDialog(this);

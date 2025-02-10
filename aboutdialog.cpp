@@ -7,6 +7,8 @@ AboutDialog::AboutDialog(QWidget *parent)
     , ui(new Ui::AboutDialog)
 {
     ui->setupUi(this);
+    m_MainWindow = parent;
+    init();
 }
 
 AboutDialog::~AboutDialog()
@@ -16,4 +18,8 @@ AboutDialog::~AboutDialog()
 
 void AboutDialog::retranslateUi() {
     ui->retranslateUi(this);
+}
+
+void AboutDialog::init() {
+
 }

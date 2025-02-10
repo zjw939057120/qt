@@ -16,9 +16,11 @@ class SampleDialog : public QDialog
 public:
     SampleDialog(QWidget *parent = nullptr);
     ~SampleDialog();
+    void init();
     void retranslateUi();
 
 private:
     Ui::SampleDialog *ui;
+    QWidget *m_MainWindow;
 };
 #endif // SAMPLEDIALOG_H

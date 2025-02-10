@@ -6,11 +6,17 @@ SampleDialog::SampleDialog(QWidget *parent)
     , ui(new Ui::SampleDialog)
 {
     ui->setupUi(this);
+    m_MainWindow = parent;
+    init();
 }
 
 SampleDialog::~SampleDialog()
 {
     delete ui;
+}
+
+void SampleDialog::init() {
+
 }
 
 void SampleDialog::retranslateUi() {

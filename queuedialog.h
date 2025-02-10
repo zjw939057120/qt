@@ -2,6 +2,7 @@
 #define QUEUEDIALOG_H
 
 #include <QDialog>
+#include "queuesettingdialog.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -16,10 +17,19 @@ class QueueDialog : public QDialog
 public:
     QueueDialog(QWidget *parent = nullptr);
     ~QueueDialog();
+    void init();
     void retranslateUi();
 
 
+private slots:
+    void on_pushButton_AddData_clicked();
+
+    void on_pushButton_StartAnalyze_clicked();
+
+    void on_pushButton_StopAnalyze_clicked();
+
 private:
     Ui::QueueDialog *ui;
+    QWidget *m_MainWindow;
 };
 #endif // QUEUEDIALOG_H

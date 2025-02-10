@@ -16,9 +16,14 @@ class QueueSettingDialog : public QDialog
 public:
     QueueSettingDialog(QWidget *parent = nullptr);
     ~QueueSettingDialog();
+    void init();
     void retranslateUi();
+
+private slots:
+    void on_pushButton_Submit_clicked();
 
 private:
     Ui::QueueSettingDialog *ui;
+    QWidget *m_MainWindow;
 };
 #endif // QUEUESETTINGDIALOG_H

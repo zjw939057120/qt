@@ -6,6 +6,8 @@ QueueSettingDialog::QueueSettingDialog(QWidget *parent)
     , ui(new Ui::QueueSettingDialog)
 {
     ui->setupUi(this);
+    m_MainWindow = parent;
+    init();
 }
 
 QueueSettingDialog::~QueueSettingDialog()
@@ -13,6 +15,16 @@ QueueSettingDialog::~QueueSettingDialog()
     delete ui;
 }
 
+void QueueSettingDialog::init() {
+    this->setModal(true);
+}
+
 void QueueSettingDialog::retranslateUi() {
     ui->retranslateUi(this);
 }
+
+void QueueSettingDialog::on_pushButton_Submit_clicked()
+{
+
+}
+

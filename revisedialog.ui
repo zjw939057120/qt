@@ -60,7 +60,7 @@
   <widget class="QWidget" name="horizontalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>460</x>
+     <x>450</x>
      <y>20</y>
      <width>324</width>
      <height>31</height>
@@ -106,7 +106,7 @@
      <x>280</x>
      <y>60</y>
      <width>511</width>
-     <height>401</height>
+     <height>381</height>
     </rect>
    </property>
   </widget>
@@ -198,106 +198,119 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="formLayoutWidget_7">
+  <widget class="QGroupBox" name="groupBox_SingleStep">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>470</y>
-     <width>121</width>
-     <height>31</height>
+     <x>280</x>
+     <y>450</y>
+     <width>381</width>
+     <height>101</height>
     </rect>
    </property>
-   <layout class="QFormLayout" name="formLayout_X_S">
-    <item row="0" column="1">
-     <widget class="QLineEdit" name="lineEdit_X_S"/>
-    </item>
-    <item row="0" column="0">
-     <widget class="QLabel" name="label_X_S">
-      <property name="text">
-       <string>X-axis</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="formLayoutWidget_8">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>470</y>
-     <width>121</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <layout class="QFormLayout" name="formLayout_Y_S">
-    <item row="0" column="1">
-     <widget class="QLineEdit" name="lineEdit_Y_S"/>
-    </item>
-    <item row="0" column="0">
-     <widget class="QLabel" name="label_Y_S">
-      <property name="text">
-       <string>Y-axis</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="formLayoutWidget_9">
-   <property name="geometry">
-    <rect>
-     <x>350</x>
-     <y>510</y>
-     <width>121</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <layout class="QFormLayout" name="formLayout_Z_S">
-    <item row="0" column="1">
-     <widget class="QLineEdit" name="lineEdit_Z_S"/>
-    </item>
-    <item row="0" column="0">
-     <widget class="QLabel" name="label_Z_S">
-      <property name="text">
-       <string>Z-axis</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="formLayoutWidget_10">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>510</y>
-     <width>121</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <layout class="QFormLayout" name="formLayout_Z1_S">
-    <item row="0" column="1">
-     <widget class="QLineEdit" name="lineEdit_Z1_S"/>
-    </item>
-    <item row="0" column="0">
-     <widget class="QLabel" name="label_Z1_S">
-      <property name="text">
-       <string>Z1-axis</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QPushButton" name="pushButton_SingleStep">
-   <property name="geometry">
-    <rect>
-     <x>620</x>
-     <y>490</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
+   <property name="title">
     <string>SingleStep</string>
    </property>
+   <widget class="QWidget" name="formLayoutWidget_10">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>60</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout_Z1_S">
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEdit_Z1_S"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_Z1_S">
+       <property name="text">
+        <string>Z1-axis</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="formLayoutWidget_7">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout_X_S">
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEdit_X_S"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_X_S">
+       <property name="text">
+        <string>X-axis</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="pushButton_SingleStep">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>40</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SingleStep</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="formLayoutWidget_9">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout_Z_S">
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEdit_Z_S"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_Z_S">
+       <property name="text">
+        <string>Z-axis</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="formLayoutWidget_8">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>20</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout_Y_S">
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEdit_Y_S"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_Y_S">
+       <property name="text">
+        <string>Y-axis</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
   </widget>
  </widget>
  <resources/>

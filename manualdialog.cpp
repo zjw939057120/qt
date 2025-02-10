@@ -6,6 +6,8 @@ ManualDialog::ManualDialog(QWidget *parent)
     , ui(new Ui::ManualDialog)
 {
     ui->setupUi(this);
+    m_MainWindow = parent;
+    init();
 }
 
 ManualDialog::~ManualDialog()
@@ -15,4 +17,8 @@ ManualDialog::~ManualDialog()
 
 void ManualDialog::retranslateUi() {
     ui->retranslateUi(this);
+}
+
+void ManualDialog::init() {
+
 }

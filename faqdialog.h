@@ -16,9 +16,11 @@ class FAQDialog : public QDialog
 public:
     FAQDialog(QWidget *parent = nullptr);
     ~FAQDialog();
+    void init();
     void retranslateUi();
 
 private:
     Ui::FAQDialog *ui;
+    QWidget *m_MainWindow;
 };
 #endif // FAQDIALOG_H
