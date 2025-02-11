@@ -16,6 +16,7 @@ ReviseDialog::~ReviseDialog()
 }
 
 void ReviseDialog::init() {
+    Utils::lineEditBorder(this);
 
 }
 

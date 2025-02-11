@@ -20,5 +20,6 @@ void ManualDialog::retranslateUi() {
 }
 
 void ManualDialog::init() {
+    Utils::lineEditBorder(this);
 
 }

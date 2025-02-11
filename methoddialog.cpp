@@ -16,6 +16,7 @@ MethodDialog::~MethodDialog()
 }
 
 void MethodDialog::init() {
+    Utils::lineEditBorder(this);
 
 }
 

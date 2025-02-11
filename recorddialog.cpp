@@ -16,6 +16,7 @@ RecordDialog::~RecordDialog()
 }
 
 void RecordDialog::init() {
+    Utils::lineEditBorder(this);
 
 }
 

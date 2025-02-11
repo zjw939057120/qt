@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
+    Utils.cpp \
     mainwindow.cpp \
     aboutdialog.cpp \
     faqdialog.cpp \
@@ -22,6 +23,7 @@ SOURCES += \
     sampledialog.cpp \
 
 HEADERS += \
+    Utils.h \
     mainwindow.h \
     aboutdialog.h \
     faqdialog.h \

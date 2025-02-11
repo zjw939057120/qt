@@ -25,7 +25,7 @@
    <property name="title">
     <string>QueueParameter</string>
    </property>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="label_QueueName">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -35,10 +35,10 @@
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>Name</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="label_Type">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -48,7 +48,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>Type</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit">
@@ -66,64 +66,64 @@
      <rect>
       <x>90</x>
       <y>60</y>
-      <width>160</width>
+      <width>131</width>
       <height>31</height>
      </rect>
     </property>
-    <layout class="QFormLayout" name="formLayout">
+    <layout class="QFormLayout" name="formLayout_S">
      <item row="0" column="0">
-      <widget class="QLabel" name="label_3">
+      <widget class="QLabel" name="label_S">
        <property name="text">
-        <string>TextLabel</string>
+        <string>S</string>
        </property>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QComboBox" name="comboBox"/>
+      <widget class="QComboBox" name="comboBox_S"/>
      </item>
     </layout>
    </widget>
    <widget class="QWidget" name="formLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>260</x>
+      <x>250</x>
       <y>60</y>
-      <width>160</width>
+      <width>141</width>
       <height>31</height>
      </rect>
     </property>
-    <layout class="QFormLayout" name="formLayout_2">
+    <layout class="QFormLayout" name="formLayout_N">
      <item row="0" column="0">
-      <widget class="QLabel" name="label_4">
+      <widget class="QLabel" name="label_N">
        <property name="text">
-        <string>TextLabel</string>
+        <string>N</string>
        </property>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QComboBox" name="comboBox_2"/>
+      <widget class="QComboBox" name="comboBox_N"/>
      </item>
     </layout>
    </widget>
    <widget class="QWidget" name="formLayoutWidget_3">
     <property name="geometry">
      <rect>
-      <x>430</x>
+      <x>420</x>
       <y>60</y>
-      <width>160</width>
+      <width>151</width>
       <height>31</height>
      </rect>
     </property>
-    <layout class="QFormLayout" name="formLayout_3">
+    <layout class="QFormLayout" name="formLayout_CI">
      <item row="0" column="0">
-      <widget class="QLabel" name="label_5">
+      <widget class="QLabel" name="label_CI">
        <property name="text">
-        <string>TextLabel</string>
+        <string>CI</string>
        </property>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QComboBox" name="comboBox_3"/>
+      <widget class="QComboBox" name="comboBox_CI"/>
      </item>
     </layout>
    </widget>
@@ -151,26 +151,26 @@
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
-      <widget class="QCheckBox" name="checkBox_2">
+      <widget class="QCheckBox" name="checkBox_N">
        <property name="text">
-        <string>CheckBox</string>
+        <string>N</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox_7"/>
+      <widget class="QComboBox" name="comboBox__Type_N"/>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox_8"/>
+      <widget class="QComboBox" name="comboBox_Curve_N"/>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox_9"/>
+      <widget class="QComboBox" name="comboBox_Method_N"/>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_4"/>
+      <widget class="QLineEdit" name="lineEdit_Concentration_N"/>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_5"/>
+      <widget class="QLineEdit" name="lineEdit_Quantity_N"/>
      </item>
     </layout>
    </widget>
@@ -183,28 +183,28 @@
       <height>23</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <layout class="QHBoxLayout" name="horizontalLayout_N">
      <item>
-      <widget class="QCheckBox" name="checkBox_3">
+      <widget class="QCheckBox" name="checkBox_CI">
        <property name="text">
-        <string>CheckBox</string>
+        <string>CI</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox_10"/>
+      <widget class="QComboBox" name="comboBox__Type_CI"/>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox_11"/>
+      <widget class="QComboBox" name="comboBox_Curve_CI"/>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox_12"/>
+      <widget class="QComboBox" name="comboBox_Method_CI"/>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_6"/>
+      <widget class="QLineEdit" name="lineEdit_Concentration_CI"/>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_7"/>
+      <widget class="QLineEdit" name="lineEdit_Quantity_CI"/>
      </item>
     </layout>
    </widget>
@@ -221,42 +221,42 @@
      <item>
       <widget class="QLabel" name="label_6">
        <property name="text">
-        <string>TextLabel</string>
+        <string>Signal</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QLabel" name="label_7">
        <property name="text">
-        <string>TextLabel</string>
+        <string>Type</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QLabel" name="label_8">
        <property name="text">
-        <string>TextLabel</string>
+        <string>Curve</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QLabel" name="label_9">
        <property name="text">
-        <string>TextLabel</string>
+        <string>Method</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QLabel" name="label_10">
        <property name="text">
-        <string>TextLabel</string>
+        <string>Concentration</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QLabel" name="label_11">
        <property name="text">
-        <string>TextLabel</string>
+        <string>Quantity</string>
        </property>
       </widget>
      </item>
@@ -273,26 +273,26 @@
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
-      <widget class="QCheckBox" name="checkBox">
+      <widget class="QCheckBox" name="checkBox_S">
        <property name="text">
-        <string>CheckBox</string>
+        <string>S</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox_4"/>
+      <widget class="QComboBox" name="comboBox_Type_S"/>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox_5"/>
+      <widget class="QComboBox" name="comboBox_Curve_S"/>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox_6"/>
+      <widget class="QComboBox" name="comboBox_Method_S"/>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_2"/>
+      <widget class="QLineEdit" name="lineEdit_Concentration_S"/>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_3"/>
+      <widget class="QLineEdit" name="lineEdit_Quantity_S"/>
      </item>
     </layout>
    </widget>
@@ -309,154 +309,154 @@
    <property name="title">
     <string>SampleParameter</string>
    </property>
-   <widget class="QLabel" name="label_12">
+   <widget class="QLabel" name="label_ID">
     <property name="geometry">
      <rect>
       <x>31</x>
       <y>30</y>
-      <width>53</width>
+      <width>91</width>
       <height>21</height>
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>ID No.</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_8">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>120</x>
       <y>30</y>
       <width>113</width>
       <height>21</height>
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="label_13">
+   <widget class="QLabel" name="label_Density">
     <property name="geometry">
      <rect>
-      <x>250</x>
+      <x>270</x>
       <y>30</y>
-      <width>53</width>
-      <height>15</height>
+      <width>101</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>Density</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_9">
     <property name="geometry">
      <rect>
-      <x>330</x>
+      <x>370</x>
       <y>30</y>
       <width>113</width>
       <height>21</height>
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="label_14">
+   <widget class="QLabel" name="label_ResultUnit">
     <property name="geometry">
      <rect>
-      <x>250</x>
+      <x>270</x>
       <y>60</y>
-      <width>53</width>
-      <height>15</height>
+      <width>101</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>ResultUnit</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_15">
+   <widget class="QLabel" name="label_Bit">
     <property name="geometry">
      <rect>
       <x>31</x>
       <y>60</y>
-      <width>53</width>
+      <width>91</width>
       <height>21</height>
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>Bit No.</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_11">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>120</x>
       <y>60</y>
       <width>113</width>
       <height>21</height>
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="label_16">
+   <widget class="QLabel" name="label_SampleUnit">
     <property name="geometry">
      <rect>
-      <x>250</x>
+      <x>270</x>
       <y>90</y>
-      <width>53</width>
-      <height>15</height>
+      <width>101</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>SampleUnit</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_17">
+   <widget class="QLabel" name="label_SampleName">
     <property name="geometry">
      <rect>
       <x>31</x>
       <y>90</y>
-      <width>53</width>
+      <width>91</width>
       <height>21</height>
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>Name</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_13">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>120</x>
       <y>90</y>
       <width>113</width>
       <height>21</height>
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="label_18">
+   <widget class="QLabel" name="label_ConversionRate">
     <property name="geometry">
      <rect>
-      <x>250</x>
+      <x>270</x>
       <y>120</y>
-      <width>53</width>
-      <height>15</height>
+      <width>101</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>ConversionRate</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_19">
+   <widget class="QLabel" name="label_Sampling">
     <property name="geometry">
      <rect>
       <x>31</x>
       <y>120</y>
-      <width>53</width>
+      <width>91</width>
       <height>21</height>
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>Sampling</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_14">
     <property name="geometry">
      <rect>
-      <x>330</x>
+      <x>370</x>
       <y>120</y>
       <width>113</width>
       <height>21</height>
@@ -466,7 +466,7 @@
    <widget class="QLineEdit" name="lineEdit_15">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>120</x>
       <y>120</y>
       <width>113</width>
       <height>21</height>
@@ -476,7 +476,7 @@
    <widget class="QComboBox" name="comboBox_13">
     <property name="geometry">
      <rect>
-      <x>330</x>
+      <x>370</x>
       <y>60</y>
       <width>111</width>
       <height>22</height>
@@ -486,7 +486,7 @@
    <widget class="QComboBox" name="comboBox_14">
     <property name="geometry">
      <rect>
-      <x>330</x>
+      <x>370</x>
       <y>90</y>
       <width>111</width>
       <height>22</height>

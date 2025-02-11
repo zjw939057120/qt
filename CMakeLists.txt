@@ -13,6 +13,7 @@ qt_standard_project_setup()
 qt_add_executable(widget
         WIN32 MACOSX_BUNDLE
         main.cpp
+        Utils.cpp
 
         mainwindow.cpp
         mainwindow.h

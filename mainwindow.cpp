@@ -113,5 +113,7 @@ void MainWindow::init() {
     m_ReviseDialog = new ReviseDialog(this);
     m_ReviseDialog = new ReviseDialog(this);
     m_SampleDialog = new SampleDialog(this);
+    Utils::lineEditBorder(this);
+
 }
 

@@ -16,6 +16,7 @@ SampleDialog::~SampleDialog()
 }
 
 void SampleDialog::init() {
+    Utils::lineEditBorder(this);
 
 }
 

@@ -2,6 +2,7 @@
 #define QUEUEDIALOG_H
 
 #include <QDialog>
+#include "Utils.h"
 #include "queuesettingdialog.h"
 
 QT_BEGIN_NAMESPACE

@@ -17,6 +17,7 @@ QueueDialog::~QueueDialog()
 }
 
 void QueueDialog::init() {
+    Utils::lineEditBorder(this);
 
 }
 
