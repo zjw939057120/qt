@@ -23,9 +23,7 @@ public:
 private slots:
     void on_pushButton_Save_clicked();
 
-    void on_pushButton_Reset_clicked();
-
-    void on_pushButton_ReviseReset_clicked();
+    void on_pushButton_Staging_clicked();
 
 private:
     Ui::MethodDialog *ui;

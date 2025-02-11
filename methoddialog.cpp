@@ -29,14 +29,8 @@ void MethodDialog::on_pushButton_Save_clicked()
 
 }
 
-
-void MethodDialog::on_pushButton_Reset_clicked()
+void MethodDialog::on_pushButton_Staging_clicked()
 {
 
 }
 
-
-void MethodDialog::on_pushButton_ReviseReset_clicked()
-{
-
-}

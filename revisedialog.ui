@@ -57,39 +57,6 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="horizontalLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>450</x>
-     <y>20</y>
-     <width>324</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <item>
-     <widget class="QPushButton" name="pushButton_ReviseCoordinates">
-      <property name="text">
-       <string>ReviseCoordinates</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_SettingParameter">
-      <property name="text">
-       <string>SettingParameter</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_ReadData">
-      <property name="text">
-       <string>ReadData</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
   <widget class="QTableWidget" name="tableWidget_Parameter">
    <property name="geometry">
     <rect>
@@ -259,8 +226,8 @@
      <rect>
       <x>280</x>
       <y>40</y>
-      <width>75</width>
-      <height>23</height>
+      <width>80</width>
+      <height>35</height>
      </rect>
     </property>
     <property name="text">
@@ -311,6 +278,45 @@
      </item>
     </layout>
    </widget>
+  </widget>
+  <widget class="QPushButton" name="pushButton_ReadData">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>20</y>
+     <width>80</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ReadData</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_SettingParameter">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>20</y>
+     <width>120</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>SettingParameter</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_ReviseCoordinates">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>20</y>
+     <width>120</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ReviseCoordinates</string>
+   </property>
   </widget>
  </widget>
  <resources/>

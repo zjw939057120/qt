@@ -21,5 +21,6 @@ void AboutDialog::retranslateUi() {
 }
 
 void AboutDialog::init() {
+    Utils::lineEditBorder(this);
 
 }

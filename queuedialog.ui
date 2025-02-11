@@ -27,55 +27,50 @@
    <property name="geometry">
     <rect>
      <x>200</x>
-     <y>50</y>
+     <y>10</y>
      <width>591</width>
-     <height>541</height>
+     <height>521</height>
     </rect>
    </property>
   </widget>
-  <widget class="QWidget" name="horizontalLayoutWidget">
+  <widget class="QPushButton" name="pushButton_AddData">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>10</y>
-     <width>491</width>
-     <height>31</height>
+     <x>265</x>
+     <y>550</y>
+     <width>120</width>
+     <height>35</height>
     </rect>
    </property>
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <item>
-     <widget class="QPushButton" name="pushButton_AddData">
-      <property name="text">
-       <string>AddData</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_StartAnalyze">
-      <property name="text">
-       <string>StartAnalyze</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_StopAnalyze">
-      <property name="text">
-       <string>StopAnalyze</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
+   <property name="text">
+    <string>AddData</string>
+   </property>
   </widget>
-  <widget class="QWidget" name="verticalLayoutWidget">
+  <widget class="QPushButton" name="pushButton_StartAnalyze">
    <property name="geometry">
     <rect>
-     <x>820</x>
-     <y>10</y>
-     <width>331</width>
-     <height>391</height>
+     <x>430</x>
+     <y>550</y>
+     <width>120</width>
+     <height>35</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout"/>
+   <property name="text">
+    <string>StartAnalyze</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_StopAnalyze">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>550</y>
+     <width>120</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>StopAnalyze</string>
+   </property>
   </widget>
  </widget>
  <resources/>

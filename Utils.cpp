@@ -7,3 +7,4 @@
 void Utils::lineEditBorder(QWidget *qWidget) {
     qWidget->setStyleSheet("QLineEdit { border: none; }");
 }
+

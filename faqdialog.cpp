@@ -20,5 +20,6 @@ void FAQDialog::retranslateUi() {
 }
 
 void FAQDialog::init() {
+    Utils::lineEditBorder(this);
 
 }

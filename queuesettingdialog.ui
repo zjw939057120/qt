@@ -30,25 +30,25 @@
      <rect>
       <x>20</x>
       <y>30</y>
-      <width>53</width>
-      <height>15</height>
+      <width>71</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
      <string>Name</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_Type">
+   <widget class="QLabel" name="label_CurveType">
     <property name="geometry">
      <rect>
       <x>20</x>
       <y>70</y>
-      <width>53</width>
-      <height>15</height>
+      <width>71</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
-     <string>Type</string>
+     <string>CurveType</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit">
@@ -108,7 +108,7 @@
    <widget class="QWidget" name="formLayoutWidget_3">
     <property name="geometry">
      <rect>
-      <x>420</x>
+      <x>430</x>
       <y>60</y>
       <width>151</width>
       <height>31</height>
@@ -212,60 +212,6 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>20</y>
-      <width>581</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QLabel" name="label_6">
-       <property name="text">
-        <string>Signal</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_7">
-       <property name="text">
-        <string>Type</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_8">
-       <property name="text">
-        <string>Curve</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_9">
-       <property name="text">
-        <string>Method</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_10">
-       <property name="text">
-        <string>Concentration</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_11">
-       <property name="text">
-        <string>Quantity</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
       <y>40</y>
       <width>585</width>
       <height>23</height>
@@ -296,6 +242,71 @@
      </item>
     </layout>
    </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>20</y>
+      <width>61</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Type</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>20</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Curve</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>20</y>
+      <width>61</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Method</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>20</y>
+      <width>161</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Concentration</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>20</y>
+      <width>151</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Quantity</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QGroupBox" name="groupBox_SampleParameter">
    <property name="geometry">
@@ -309,17 +320,17 @@
    <property name="title">
     <string>SampleParameter</string>
    </property>
-   <widget class="QLabel" name="label_ID">
+   <widget class="QLabel" name="label_IDNum">
     <property name="geometry">
      <rect>
-      <x>31</x>
+      <x>30</x>
       <y>30</y>
       <width>91</width>
       <height>21</height>
      </rect>
     </property>
     <property name="text">
-     <string>ID No.</string>
+     <string>IDNum</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_8">
@@ -368,17 +379,17 @@
      <string>ResultUnit</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_Bit">
+   <widget class="QLabel" name="label_BitNum">
     <property name="geometry">
      <rect>
-      <x>31</x>
+      <x>30</x>
       <y>60</y>
       <width>91</width>
       <height>21</height>
      </rect>
     </property>
     <property name="text">
-     <string>Bit No.</string>
+     <string>BitNum</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_11">
@@ -407,14 +418,14 @@
    <widget class="QLabel" name="label_SampleName">
     <property name="geometry">
      <rect>
-      <x>31</x>
+      <x>30</x>
       <y>90</y>
       <width>91</width>
       <height>21</height>
      </rect>
     </property>
     <property name="text">
-     <string>Name</string>
+     <string>SampleName</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_13">
@@ -443,7 +454,7 @@
    <widget class="QLabel" name="label_Sampling">
     <property name="geometry">
      <rect>
-      <x>31</x>
+      <x>30</x>
       <y>120</y>
       <width>91</width>
       <height>21</height>
@@ -494,17 +505,43 @@
     </property>
    </widget>
   </widget>
-  <widget class="QPushButton" name="pushButton_Submit">
+  <widget class="QPushButton" name="pushButton_Save">
    <property name="geometry">
     <rect>
-     <x>260</x>
+     <x>250</x>
      <y>440</y>
-     <width>75</width>
-     <height>23</height>
+     <width>60</width>
+     <height>30</height>
     </rect>
    </property>
    <property name="text">
-    <string>Submit</string>
+    <string>Save</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_Staging">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>440</y>
+     <width>60</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Staging</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>32</x>
+     <y>140</y>
+     <width>41</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Signal</string>
    </property>
   </widget>
  </widget>

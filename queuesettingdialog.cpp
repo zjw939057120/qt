@@ -16,8 +16,9 @@ QueueSettingDialog::~QueueSettingDialog()
 }
 
 void QueueSettingDialog::init() {
-    Utils::lineEditBorder(this);
     this->setModal(true);
+
+    Utils::lineEditBorder(this);
 
 }
 
@@ -25,7 +26,13 @@ void QueueSettingDialog::retranslateUi() {
     ui->retranslateUi(this);
 }
 
-void QueueSettingDialog::on_pushButton_Submit_clicked()
+void QueueSettingDialog::on_pushButton_Save_clicked()
+{
+
+}
+
+
+void QueueSettingDialog::on_pushButton_Staging_clicked()
 {
 
 }

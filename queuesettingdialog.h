@@ -21,7 +21,10 @@ public:
     void retranslateUi();
 
 private slots:
-    void on_pushButton_Submit_clicked();
+
+    void on_pushButton_Save_clicked();
+
+    void on_pushButton_Staging_clicked();
 
 private:
     Ui::QueueSettingDialog *ui;

@@ -28,7 +28,7 @@
     <rect>
      <x>200</x>
      <y>20</y>
-     <width>231</width>
+     <width>261</width>
      <height>61</height>
     </rect>
    </property>
@@ -64,9 +64,9 @@
   <widget class="QWidget" name="formLayoutWidget_2">
    <property name="geometry">
     <rect>
-     <x>440</x>
+     <x>480</x>
      <y>20</y>
-     <width>251</width>
+     <width>281</width>
      <height>61</height>
     </rect>
    </property>
@@ -239,43 +239,30 @@
     </item>
    </layout>
   </widget>
-  <widget class="QPushButton" name="pushButton_Reset">
-   <property name="geometry">
-    <rect>
-     <x>590</x>
-     <y>550</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Reset</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_ReviseReset">
+  <widget class="QPushButton" name="pushButton_Staging">
    <property name="geometry">
     <rect>
      <x>680</x>
      <y>550</y>
-     <width>75</width>
-     <height>23</height>
+     <width>60</width>
+     <height>35</height>
     </rect>
    </property>
    <property name="text">
-    <string>ReviseReset</string>
+    <string>Staging</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_Save">
    <property name="geometry">
     <rect>
-     <x>700</x>
-     <y>30</y>
-     <width>53</width>
-     <height>41</height>
+     <x>600</x>
+     <y>550</y>
+     <width>60</width>
+     <height>35</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton { font-size: 12px; padding: 12px; }</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Save</string>
