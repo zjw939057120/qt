@@ -27,3 +27,9 @@ void FAQDialog::init() {
     Utils::lineEditBorder(this);
     Utils::windowMinMaxButtonsHint(this);
 }
+
+void FAQDialog::on_pushButton_Close_clicked()
+{
+    close();
+}
+

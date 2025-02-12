@@ -27,3 +27,9 @@ void ManualDialog::init() {
     Utils::lineEditBorder(this);
     Utils::windowMinMaxButtonsHint(this);
 }
+
+void ManualDialog::on_pushButton_Close_clicked()
+{
+    close();
+}
+

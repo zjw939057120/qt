@@ -27,3 +27,9 @@ void SampleDialog::init() {
 void SampleDialog::retranslateUi() {
     ui->retranslateUi(this);
 }
+
+void SampleDialog::on_pushButton_Close_clicked()
+{
+    close();
+}
+

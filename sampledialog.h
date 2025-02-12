@@ -21,6 +21,9 @@ public:
     void init();
     void retranslateUi();
 
+private slots:
+    void on_pushButton_Close_clicked();
+
 private:
     Ui::SampleDialog *ui;
     QWidget *m_MainWindow;

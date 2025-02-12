@@ -21,6 +21,11 @@
         <source>FAQDialog</source>
         <translation>FAQ</translation>
     </message>
+    <message>
+        <location filename="faqdialog.ui" line="26"/>
+        <source>Close</source>
+        <translation>Close</translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -132,6 +137,11 @@
         <source>ManualDialog</source>
         <translation>Manual</translation>
     </message>
+    <message>
+        <location filename="manualdialog.ui" line="26"/>
+        <source>Close</source>
+        <translation>Close</translation>
+    </message>
 </context>
 <context>
     <name>MethodDialog</name>
@@ -189,12 +199,17 @@
         <location filename="methoddialog.ui" line="252"/>
         <source>Stage</source>
         <oldsource>Staging</oldsource>
-        <translation>Staging</translation>
+        <translation>Stage</translation>
     </message>
     <message>
         <location filename="methoddialog.ui" line="268"/>
         <source>Save</source>
         <translation>Save</translation>
+    </message>
+    <message>
+        <location filename="methoddialog.ui" line="281"/>
+        <source>Close</source>
+        <translation>Close</translation>
     </message>
 </context>
 <context>
@@ -333,7 +348,7 @@
     <message>
         <location filename="queuesettingdialog.ui" line="464"/>
         <source>Sampling</source>
-        <translation></translation>
+        <translation>Sampling</translation>
     </message>
     <message>
         <location filename="queuesettingdialog.ui" line="518"/>
@@ -344,7 +359,7 @@
         <location filename="queuesettingdialog.ui" line="531"/>
         <source>Stage</source>
         <oldsource>Staging</oldsource>
-        <translation>Staging</translation>
+        <translation>Stage</translation>
     </message>
     <message>
         <location filename="queuesettingdialog.ui" line="544"/>
@@ -358,6 +373,11 @@
         <location filename="recorddialog.ui" line="14"/>
         <source>RecordDialog</source>
         <translation>Record</translation>
+    </message>
+    <message>
+        <location filename="recorddialog.ui" line="26"/>
+        <source>Close</source>
+        <translation>Close</translation>
     </message>
 </context>
 <context>
@@ -430,6 +450,11 @@
         <location filename="sampledialog.ui" line="14"/>
         <source>SampleDialog</source>
         <translation>Sample</translation>
+    </message>
+    <message>
+        <location filename="sampledialog.ui" line="26"/>
+        <source>Close</source>
+        <translation>Close</translation>
     </message>
 </context>
 </TS>

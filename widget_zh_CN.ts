@@ -21,6 +21,11 @@
         <source>FAQDialog</source>
         <translation>常见问题</translation>
     </message>
+    <message>
+        <location filename="faqdialog.ui" line="26"/>
+        <source>Close</source>
+        <translation>关闭</translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -132,6 +137,11 @@
         <source>ManualDialog</source>
         <translation>手册</translation>
     </message>
+    <message>
+        <location filename="manualdialog.ui" line="26"/>
+        <source>Close</source>
+        <translation>关闭</translation>
+    </message>
 </context>
 <context>
     <name>MethodDialog</name>
@@ -195,6 +205,11 @@
         <location filename="methoddialog.ui" line="268"/>
         <source>Save</source>
         <translation>保存</translation>
+    </message>
+    <message>
+        <location filename="methoddialog.ui" line="281"/>
+        <source>Close</source>
+        <translation>关闭</translation>
     </message>
 </context>
 <context>
@@ -359,6 +374,11 @@
         <source>RecordDialog</source>
         <translation>记录</translation>
     </message>
+    <message>
+        <location filename="recorddialog.ui" line="26"/>
+        <source>Close</source>
+        <translation>关闭</translation>
+    </message>
 </context>
 <context>
     <name>ReviseDialog</name>
@@ -429,6 +449,11 @@
         <location filename="sampledialog.ui" line="14"/>
         <source>SampleDialog</source>
         <translation>样本</translation>
+    </message>
+    <message>
+        <location filename="sampledialog.ui" line="26"/>
+        <source>Close</source>
+        <translation>关闭</translation>
     </message>
 </context>
 </TS>

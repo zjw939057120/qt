@@ -27,3 +27,9 @@ void RecordDialog::init() {
 void RecordDialog::retranslateUi() {
     ui->retranslateUi(this);
 }
+
+void RecordDialog::on_pushButton_Close_clicked()
+{
+    close();
+}
+
