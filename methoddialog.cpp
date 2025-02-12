@@ -7,7 +7,7 @@ MethodDialog::MethodDialog(QWidget *parent)
 {
     ui->setupUi(this);
     m_MainWindow = parent;
-    env();
+    InitEnv();
 }
 
 MethodDialog::~MethodDialog()
@@ -15,13 +15,13 @@ MethodDialog::~MethodDialog()
     delete ui;
 }
 
-void MethodDialog::env() {
-    init();
+void MethodDialog::InitEnv() {
+    Init();
 }
 
-void MethodDialog::init() {
-    Utils::lineEditBorder(this);
-    Utils::windowMinMaxButtonsHint(this);
+void MethodDialog::Init() {
+    Toolkit::LineEditBorder(this);
+    Toolkit::MinMaxButtonsHint(this);
 }
 
 void MethodDialog::retranslateUi() {

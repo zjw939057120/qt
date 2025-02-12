@@ -11,6 +11,7 @@
 #include "recorddialog.h"
 #include "revisedialog.h"
 #include "sampledialog.h"
+#include "mydefine.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -26,9 +27,9 @@ public:
 
     ~MainWindow();
 
-    void env();
+    void InitEnv();
 
-    void init();
+    void Init();
 
     void retranslateUi(const QString &lang);
 

@@ -2,7 +2,7 @@
 #define SAMPLEDIALOG_H
 
 #include <QDialog>
-#include "Utils.h"
+#include "Toolkit.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -17,8 +17,8 @@ class SampleDialog : public QDialog
 public:
     SampleDialog(QWidget *parent = nullptr);
     ~SampleDialog();
-    void env();
-    void init();
+    void InitEnv();
+    void Init();
     void retranslateUi();
 
 private slots:

@@ -1,6 +1,7 @@
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+QT       += ws2_32
 
 CONFIG += c++17
 
@@ -11,6 +12,7 @@ CONFIG += c++17
 SOURCES += \
     main.cpp \
     Utils.cpp \
+    Toolkit.cpp \
     mainwindow.cpp \
     aboutdialog.cpp \
     faqdialog.cpp \
@@ -22,8 +24,13 @@ SOURCES += \
     revisedialog.cpp \
     sampledialog.cpp \
 
+    modbus.cpp \
+    socket.cpp \
+    uart.cpp \
+
 HEADERS += \
     Utils.h \
+    Toolkit.h \
     mainwindow.h \
     aboutdialog.h \
     faqdialog.h \
@@ -34,6 +41,8 @@ HEADERS += \
     recorddialog.h \
     revisedialog.h \
     sampledialog.h \
+
+    mydefine.h \
 
 FORMS += \
     mainwindow.ui \

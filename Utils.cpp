@@ -1,15 +1,6 @@
 //
-// Created by zjw93 on 2025/2/11.
+// Created by zjw93 on 2025/2/12.
 //
 
 #include "Utils.h"
-
-void Utils::lineEditBorder(QWidget *qWidget) {
-    qWidget->setStyleSheet("QLineEdit { border: none; }");
-}
-
-void Utils::windowMinMaxButtonsHint(QWidget *qWidget) {
-    qWidget->setWindowFlags(qWidget->windowFlags() & ~Qt::WindowMinMaxButtonsHint);
-
-}
-
+#include "mydefine.h"

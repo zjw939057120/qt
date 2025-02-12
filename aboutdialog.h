@@ -2,7 +2,7 @@
 #define ABOUTDIALOG_H
 
 #include <QDialog>
-#include "Utils.h"
+#include "Toolkit.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -17,8 +17,8 @@ class AboutDialog : public QDialog
 public:
     AboutDialog(QWidget *parent = nullptr);
     ~AboutDialog();
-    void env();
-    void init();
+    void InitEnv();
+    void Init();
     void retranslateUi();
 
 private slots:

@@ -7,7 +7,7 @@ FAQDialog::FAQDialog(QWidget *parent)
 {
     ui->setupUi(this);
     m_MainWindow = parent;
-    env();
+    InitEnv();
 }
 
 FAQDialog::~FAQDialog()
@@ -19,13 +19,13 @@ void FAQDialog::retranslateUi() {
     ui->retranslateUi(this);
 }
 
-void FAQDialog::env() {
-    init();
+void FAQDialog::InitEnv() {
+    Init();
 }
 
-void FAQDialog::init() {
-    Utils::lineEditBorder(this);
-    Utils::windowMinMaxButtonsHint(this);
+void FAQDialog::Init() {
+    Toolkit::LineEditBorder(this);
+    Toolkit::MinMaxButtonsHint(this);
 }
 
 void FAQDialog::on_pushButton_Close_clicked()

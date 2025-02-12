@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.19)
 project(widget LANGUAGES CXX)
 
+include_directories(.)
+link_directories(.)
+
 set(CMAKE_PREFIX_PATH "D:/Qt/6.8.2/mingw_64/lib/cmake")
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
@@ -14,6 +17,7 @@ qt_add_executable(widget
         WIN32 MACOSX_BUNDLE
         main.cpp
         Utils.cpp
+        Toolkit.cpp
 
         mainwindow.cpp
         mainwindow.h
@@ -57,6 +61,10 @@ qt_add_executable(widget
 
         resources.qrc
         resource.rc
+
+        modbus.cpp
+        socket.cpp
+        uart.cpp
         )
 
 qt_add_translations(
@@ -71,6 +79,11 @@ target_link_libraries(widget
         Qt::Widgets
         )
 
+target_link_libraries(widget
+        PRIVATE
+        ws2_32
+        Pcomm.lib
+        )
 include(GNUInstallDirs)
 
 install(TARGETS widget

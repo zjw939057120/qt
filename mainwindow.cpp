@@ -5,11 +5,12 @@
 #include <QApplication>
 #include <QLocale>
 #include <QTranslator>
+#include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent)
         : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
-    env();
+    InitEnv();
 }
 
 MainWindow::~MainWindow() {
@@ -90,7 +91,7 @@ void MainWindow::retranslateUi(const QString &lang) {
     }
 }
 
-void MainWindow::env() {
+void MainWindow::InitEnv() {
     m_AboutDialog = new AboutDialog(this);
     m_FAQDialog = new FAQDialog(this);
     m_ManualDialog = new ManualDialog(this);
@@ -101,13 +102,31 @@ void MainWindow::env() {
     m_ReviseDialog = new ReviseDialog(this);
     m_ReviseDialog = new ReviseDialog(this);
     m_SampleDialog = new SampleDialog(this);
-    init();
+    Init();
 }
 
-void MainWindow::init() {
-    Utils::lineEditBorder(this);
+void MainWindow::Init() {
+    Toolkit::LineEditBorder(this);
 #ifdef __linux__
     Utils::windowMinMaxButtonsHint(this);
 #endif
+
+    Toolkit::CreatePath("Log");
+    Toolkit::CreatePath("Queue");
+    Toolkit::CreatePath("Method");
+    Toolkit::WriteLogFile("打开软件");
+    uint8_t nFlag;
+    nFlag = Toolkit::ReadFile(".\\Queue\\QueueFile.bin", (unsigned char *) &QueueDlg, sizeof(STRQUEUE) * QUEUE_TOTAL);
+    if (!nFlag) Toolkit::WriteLogFile("没有找到队列文件");        //添加log日志
+
+    nFlag = Toolkit::ReadFile(".\\Method\\MethodFile.bin", (unsigned char *) &MethodDlg,
+                              sizeof(STRMETHOD) * METHOD_TOTAL);
+    if (!nFlag) Toolkit::WriteLogFile("没有找到方法文件");        //添加log日志
+    nFlag = Toolkit::ReadConfigFile("System.ini", VariaDlg.SystemPara);
+    if (!nFlag) {
+        Toolkit::WriteLogFile("没有找到系统配置文件");        //添加log日志
+        QMessageBox::warning(nullptr, "错误", "读取配置文件失败，请检查文件");
+        exit(0);
+    }
 }
 

@@ -2,7 +2,7 @@
 #define RECORDDIALOG_H
 
 #include <QDialog>
-#include "Utils.h"
+#include "Toolkit.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -17,8 +17,8 @@ class RecordDialog : public QDialog
 public:
     RecordDialog(QWidget *parent = nullptr);
     ~RecordDialog();
-    void env();
-    void init();
+    void InitEnv();
+    void Init();
     void retranslateUi();
 
 private slots:

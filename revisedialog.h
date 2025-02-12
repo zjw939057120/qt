@@ -2,7 +2,7 @@
 #define REVISEDIALOG_H
 
 #include <QDialog>
-#include "Utils.h"
+#include "Toolkit.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -17,8 +17,8 @@ class ReviseDialog : public QDialog
 public:
     ReviseDialog(QWidget *parent = nullptr);
     ~ReviseDialog();
-    void env();
-    void init();
+    void InitEnv();
+    void Init();
     void retranslateUi();
 
 private slots:

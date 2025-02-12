@@ -2,7 +2,7 @@
 #define QUEUESETTINGDIALOG_H
 
 #include <QDialog>
-#include "Utils.h"
+#include "Toolkit.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -17,8 +17,8 @@ class QueueSettingDialog : public QDialog
 public:
     QueueSettingDialog(QWidget *parent = nullptr);
     ~QueueSettingDialog();
-    void env();
-    void init();
+    void InitEnv();
+    void Init();
     void retranslateUi();
 
 private slots:

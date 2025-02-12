@@ -2,7 +2,7 @@
 #define MANUALDIALOG_H
 
 #include <QDialog>
-#include "Utils.h"
+#include "Toolkit.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -17,8 +17,8 @@ class ManualDialog : public QDialog
 public:
     ManualDialog(QWidget *parent = nullptr);
     ~ManualDialog();
-    void env();
-    void init();
+    void InitEnv();
+    void Init();
     void retranslateUi();
 
 private slots:

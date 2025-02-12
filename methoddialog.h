@@ -2,7 +2,7 @@
 #define METHODDIALOG_H
 
 #include <QDialog>
-#include "Utils.h"
+#include "Toolkit.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -17,8 +17,8 @@ class MethodDialog : public QDialog
 public:
     MethodDialog(QWidget *parent = nullptr);
     ~MethodDialog();
-    void env();
-    void init();
+    void InitEnv();
+    void Init();
     void retranslateUi();
 
 private slots:
