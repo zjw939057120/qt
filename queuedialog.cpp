@@ -8,7 +8,7 @@ QueueDialog::QueueDialog(QWidget *parent)
 {
     ui->setupUi(this);
     m_MainWindow = parent;
-    init();
+    env();
 }
 
 QueueDialog::~QueueDialog()
@@ -16,9 +16,13 @@ QueueDialog::~QueueDialog()
     delete ui;
 }
 
+void QueueDialog::env() {
+    init();
+}
+
 void QueueDialog::init() {
     Utils::lineEditBorder(this);
-
+    Utils::windowMinMaxButtonsHint(this);
 }
 
 void QueueDialog::retranslateUi() {

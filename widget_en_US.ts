@@ -8,6 +8,11 @@
         <source>AboutDialog</source>
         <translation>About</translation>
     </message>
+    <message>
+        <location filename="aboutdialog.ui" line="32"/>
+        <source>Close</source>
+        <translation>Close</translation>
+    </message>
 </context>
 <context>
     <name>FAQDialog</name>
@@ -182,7 +187,8 @@
     </message>
     <message>
         <location filename="methoddialog.ui" line="252"/>
-        <source>Staging</source>
+        <source>Stage</source>
+        <oldsource>Staging</oldsource>
         <translation>Staging</translation>
     </message>
     <message>
@@ -336,7 +342,8 @@
     </message>
     <message>
         <location filename="queuesettingdialog.ui" line="531"/>
-        <source>Staging</source>
+        <source>Stage</source>
+        <oldsource>Staging</oldsource>
         <translation>Staging</translation>
     </message>
     <message>

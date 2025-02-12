@@ -17,13 +17,14 @@ class MethodDialog : public QDialog
 public:
     MethodDialog(QWidget *parent = nullptr);
     ~MethodDialog();
+    void env();
     void init();
     void retranslateUi();
 
 private slots:
     void on_pushButton_Save_clicked();
 
-    void on_pushButton_Staging_clicked();
+    void on_pushButton_Stage_clicked();
 
 private:
     Ui::MethodDialog *ui;

@@ -7,7 +7,7 @@ SampleDialog::SampleDialog(QWidget *parent)
 {
     ui->setupUi(this);
     m_MainWindow = parent;
-    init();
+    env();
 }
 
 SampleDialog::~SampleDialog()
@@ -15,9 +15,13 @@ SampleDialog::~SampleDialog()
     delete ui;
 }
 
+void SampleDialog::env() {
+    init();
+}
+
 void SampleDialog::init() {
     Utils::lineEditBorder(this);
-
+    Utils::windowMinMaxButtonsHint(this);
 }
 
 void SampleDialog::retranslateUi() {

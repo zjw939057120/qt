@@ -17,6 +17,7 @@ class ManualDialog : public QDialog
 public:
     ManualDialog(QWidget *parent = nullptr);
     ~ManualDialog();
+    void env();
     void init();
     void retranslateUi();
 

@@ -8,7 +8,7 @@ AboutDialog::AboutDialog(QWidget *parent)
 {
     ui->setupUi(this);
     m_MainWindow = parent;
-    init();
+    env();
 }
 
 AboutDialog::~AboutDialog()
@@ -20,7 +20,16 @@ void AboutDialog::retranslateUi() {
     ui->retranslateUi(this);
 }
 
+void AboutDialog::env() {
+    init();
+}
+
 void AboutDialog::init() {
     Utils::lineEditBorder(this);
 
+}
+
+void AboutDialog::on_pushButton_Close_clicked()
+{
+    close();
 }

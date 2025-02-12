@@ -18,6 +18,7 @@ class QueueDialog : public QDialog
 public:
     QueueDialog(QWidget *parent = nullptr);
     ~QueueDialog();
+    void env();
     void init();
     void retranslateUi();
 

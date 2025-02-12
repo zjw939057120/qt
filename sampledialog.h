@@ -17,6 +17,7 @@ class SampleDialog : public QDialog
 public:
     SampleDialog(QWidget *parent = nullptr);
     ~SampleDialog();
+    void env();
     void init();
     void retranslateUi();
 

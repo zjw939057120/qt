@@ -239,7 +239,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QPushButton" name="pushButton_Staging">
+  <widget class="QPushButton" name="pushButton_Stage">
    <property name="geometry">
     <rect>
      <x>680</x>
@@ -249,7 +249,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Staging</string>
+    <string>Stage</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_Save">

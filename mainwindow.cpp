@@ -9,7 +9,7 @@
 MainWindow::MainWindow(QWidget *parent)
         : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
-    init();
+    env();
 }
 
 MainWindow::~MainWindow() {
@@ -90,7 +90,7 @@ void MainWindow::retranslateUi(const QString &lang) {
     }
 }
 
-void MainWindow::init() {
+void MainWindow::env() {
     m_AboutDialog = new AboutDialog(this);
     m_FAQDialog = new FAQDialog(this);
     m_ManualDialog = new ManualDialog(this);
@@ -101,8 +101,13 @@ void MainWindow::init() {
     m_ReviseDialog = new ReviseDialog(this);
     m_ReviseDialog = new ReviseDialog(this);
     m_SampleDialog = new SampleDialog(this);
+    init();
+}
 
+void MainWindow::init() {
     Utils::lineEditBorder(this);
-
+#ifdef __linux__
+    Utils::windowMinMaxButtonsHint(this);
+#endif
 }
 

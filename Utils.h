@@ -12,6 +12,8 @@ class Utils {
 
 public:
     static void lineEditBorder(QWidget *qWidget);
+
+    static void windowMinMaxButtonsHint(QWidget *qWidget);
 };
 
 

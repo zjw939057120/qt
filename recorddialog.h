@@ -17,6 +17,7 @@ class RecordDialog : public QDialog
 public:
     RecordDialog(QWidget *parent = nullptr);
     ~RecordDialog();
+    void env();
     void init();
     void retranslateUi();
 

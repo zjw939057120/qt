@@ -7,7 +7,7 @@ ReviseDialog::ReviseDialog(QWidget *parent)
 {
     ui->setupUi(this);
     m_MainWindow = parent;
-    init();
+    env();
 }
 
 ReviseDialog::~ReviseDialog()
@@ -15,9 +15,13 @@ ReviseDialog::~ReviseDialog()
     delete ui;
 }
 
+void ReviseDialog::env() {
+    init();
+}
+
 void ReviseDialog::init() {
     Utils::lineEditBorder(this);
-
+    Utils::windowMinMaxButtonsHint(this);
 }
 
 void ReviseDialog::retranslateUi() {
@@ -46,4 +50,5 @@ void ReviseDialog::on_pushButton_SingleStep_clicked()
 {
 
 }
+
 

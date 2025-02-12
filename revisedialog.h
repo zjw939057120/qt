@@ -17,6 +17,7 @@ class ReviseDialog : public QDialog
 public:
     ReviseDialog(QWidget *parent = nullptr);
     ~ReviseDialog();
+    void env();
     void init();
     void retranslateUi();
 

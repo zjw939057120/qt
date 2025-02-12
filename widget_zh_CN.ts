@@ -8,6 +8,11 @@
         <source>AboutDialog</source>
         <translation>关于</translation>
     </message>
+    <message>
+        <location filename="aboutdialog.ui" line="32"/>
+        <source>Close</source>
+        <translation>关闭</translation>
+    </message>
 </context>
 <context>
     <name>FAQDialog</name>
@@ -182,7 +187,8 @@
     </message>
     <message>
         <location filename="methoddialog.ui" line="252"/>
-        <source>Staging</source>
+        <source>Stage</source>
+        <oldsource>Staging</oldsource>
         <translation>暂存</translation>
     </message>
     <message>
@@ -336,7 +342,8 @@
     </message>
     <message>
         <location filename="queuesettingdialog.ui" line="531"/>
-        <source>Staging</source>
+        <source>Stage</source>
+        <oldsource>Staging</oldsource>
         <translation>暂存</translation>
     </message>
     <message>
@@ -398,7 +405,7 @@
         <location filename="revisedialog.ui" line="178"/>
         <location filename="revisedialog.ui" line="234"/>
         <source>SingleStep</source>
-        <translation type="unfinished">单步运动</translation>
+        <translation>单步运动</translation>
     </message>
     <message>
         <location filename="revisedialog.ui" line="292"/>

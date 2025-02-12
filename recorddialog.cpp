@@ -7,7 +7,7 @@ RecordDialog::RecordDialog(QWidget *parent)
 {
     ui->setupUi(this);
     m_MainWindow = parent;
-    init();
+    env();
 }
 
 RecordDialog::~RecordDialog()
@@ -15,12 +15,15 @@ RecordDialog::~RecordDialog()
     delete ui;
 }
 
+void RecordDialog::env() {
+    init();
+}
+
 void RecordDialog::init() {
     Utils::lineEditBorder(this);
-
+    Utils::windowMinMaxButtonsHint(this);
 }
 
 void RecordDialog::retranslateUi() {
     ui->retranslateUi(this);
 }
-

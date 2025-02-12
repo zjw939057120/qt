@@ -8,3 +8,8 @@ void Utils::lineEditBorder(QWidget *qWidget) {
     qWidget->setStyleSheet("QLineEdit { border: none; }");
 }
 
+void Utils::windowMinMaxButtonsHint(QWidget *qWidget) {
+    qWidget->setWindowFlags(qWidget->windowFlags() & ~Qt::WindowMinMaxButtonsHint);
+
+}
+

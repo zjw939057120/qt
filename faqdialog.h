@@ -17,6 +17,7 @@ class FAQDialog : public QDialog
 public:
     FAQDialog(QWidget *parent = nullptr);
     ~FAQDialog();
+    void env();
     void init();
     void retranslateUi();
 

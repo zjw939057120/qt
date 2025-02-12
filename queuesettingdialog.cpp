@@ -7,7 +7,7 @@ QueueSettingDialog::QueueSettingDialog(QWidget *parent)
 {
     ui->setupUi(this);
     m_MainWindow = parent;
-    init();
+    env();
 }
 
 QueueSettingDialog::~QueueSettingDialog()
@@ -15,11 +15,14 @@ QueueSettingDialog::~QueueSettingDialog()
     delete ui;
 }
 
-void QueueSettingDialog::init() {
+void QueueSettingDialog::env() {
     this->setModal(true);
+    init();
+}
 
+void QueueSettingDialog::init() {
     Utils::lineEditBorder(this);
-
+    Utils::windowMinMaxButtonsHint(this);
 }
 
 void QueueSettingDialog::retranslateUi() {
@@ -28,12 +31,11 @@ void QueueSettingDialog::retranslateUi() {
 
 void QueueSettingDialog::on_pushButton_Save_clicked()
 {
-
+    close();
 }
 
 
-void QueueSettingDialog::on_pushButton_Staging_clicked()
+void QueueSettingDialog::on_pushButton_Stage_clicked()
 {
-
+    close();
 }
-
