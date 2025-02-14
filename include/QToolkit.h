@@ -2,14 +2,20 @@
 // Created by zjw93 on 2025/2/11.
 //
 
-#ifndef WIDGET_TOOLKIT_H
-#define WIDGET_TOOLKIT_H
-
+#ifndef WIDGET_QTOOLKIT_H
+#define WIDGET_QTOOLKIT_H
 
 #include <QWidget>
 #include "Utils.h"
 
-class Toolkit {
+#define  DATA_PATH "Data"
+#define  SETTING_FILE_PATH "Data/System.ini"
+#define  METHOD_FILE_PATH  "Data/Method.bin"
+#define  QUEUE_FILE_PATH "Data/Queue.bin"
+#define  LOG_PATH "Log"
+#define  LOG_FILE_PATH "Log/Log%1.txt"
+
+class QToolkit {
 
 public:
     static void LineEditBorder(QWidget *qWidget);
@@ -26,4 +32,4 @@ public:
 };
 
 
-#endif //WIDGET_TOOLKIT_H
+#endif //WIDGET_QTOOLKIT_H

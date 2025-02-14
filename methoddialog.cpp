@@ -7,6 +7,7 @@ MethodDialog::MethodDialog(QWidget *parent)
 {
     ui->setupUi(this);
     m_MainWindow = parent;
+    m_MethodDialogEx = new MethodDialogEx(parent);
     InitEnv();
 }
 
@@ -20,8 +21,8 @@ void MethodDialog::InitEnv() {
 }
 
 void MethodDialog::Init() {
-    Toolkit::LineEditBorder(this);
-    Toolkit::MinMaxButtonsHint(this);
+    QToolkit::LineEditBorder(this);
+    QToolkit::MinMaxButtonsHint(this);
 }
 
 void MethodDialog::retranslateUi() {

@@ -7,6 +7,7 @@ RecordDialog::RecordDialog(QWidget *parent)
 {
     ui->setupUi(this);
     m_MainWindow = parent;
+    m_RecordDialogEx = new RecordDialogEx(parent);
     InitEnv();
 }
 
@@ -20,8 +21,8 @@ void RecordDialog::InitEnv() {
 }
 
 void RecordDialog::Init() {
-    Toolkit::LineEditBorder(this);
-    Toolkit::MinMaxButtonsHint(this);
+    QToolkit::LineEditBorder(this);
+    QToolkit::MinMaxButtonsHint(this);
 }
 
 void RecordDialog::retranslateUi() {

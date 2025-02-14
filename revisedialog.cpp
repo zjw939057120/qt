@@ -7,6 +7,7 @@ ReviseDialog::ReviseDialog(QWidget *parent)
 {
     ui->setupUi(this);
     m_MainWindow = parent;
+    m_ReviseDialogEx = new ReviseDialogEx(parent);
     InitEnv();
 }
 
@@ -20,8 +21,8 @@ void ReviseDialog::InitEnv() {
 }
 
 void ReviseDialog::Init() {
-    Toolkit::LineEditBorder(this);
-    Toolkit::MinMaxButtonsHint(this);
+    QToolkit::LineEditBorder(this);
+    QToolkit::MinMaxButtonsHint(this);
 }
 
 void ReviseDialog::retranslateUi() {

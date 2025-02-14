@@ -7,6 +7,7 @@ QueueSettingDialog::QueueSettingDialog(QWidget *parent)
 {
     ui->setupUi(this);
     m_MainWindow = parent;
+    m_QueueSettingDialogEx = new QueueSettingDialogEx(parent);
     InitEnv();
 }
 
@@ -21,8 +22,8 @@ void QueueSettingDialog::InitEnv() {
 }
 
 void QueueSettingDialog::Init() {
-    Toolkit::LineEditBorder(this);
-    Toolkit::MinMaxButtonsHint(this);
+    QToolkit::LineEditBorder(this);
+    QToolkit::MinMaxButtonsHint(this);
 }
 
 void QueueSettingDialog::retranslateUi() {

@@ -5,7 +5,6 @@
 
 #pragma comment(lib, "Shlwapi.lib")
 
-#include "Pcomm.h"
 
 #define CAP_DATA_SHOW_LENGHT    0x1ff    //总共显示的点个数
 #define CAP_DATA_SHOW_X_AXIS    0x1ff   //X轴显示的点最大值

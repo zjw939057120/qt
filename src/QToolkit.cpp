@@ -2,8 +2,8 @@
 // Created by zjw93 on 2025/2/11.
 //
 
-#include "Toolkit.h"
-#include "mydefine.h"
+#include "../include/QToolkit.h"
+#include "../include/mydefine.h"
 #include <QDebug>
 #include <QDir>
 #include <QFile>
@@ -11,18 +11,18 @@
 #include <QDateTime>
 #include <QSettings>
 
-void Toolkit::LineEditBorder(QWidget *qWidget) {
+void QToolkit::LineEditBorder(QWidget *qWidget) {
     qWidget->setStyleSheet("QLineEdit { border: none; }");
 }
 
-void Toolkit::MinMaxButtonsHint(QWidget *qWidget) {
+void QToolkit::MinMaxButtonsHint(QWidget *qWidget) {
     qWidget->setWindowFlags(qWidget->windowFlags() & ~Qt::WindowMinMaxButtonsHint);
 
 }
 
-void Toolkit::WriteLogFile(const char *message) {
+void QToolkit::WriteLogFile(const char *message) {
     // 创建日志文件（如果文件不存在则会创建）
-    QString qString = QString("Log\\%1.txt").arg(QDateTime::currentDateTime().toString("yyyy-MM-dd"));
+    QString qString = QString(LOG_FILE_PATH).arg(QDateTime::currentDateTime().toString("yyyy-MM-dd"));
     QFile file(qString);
 
     // 以追加模式打开文件
@@ -41,7 +41,7 @@ void Toolkit::WriteLogFile(const char *message) {
     }
 }
 
-void Toolkit::CreatePath(const char *path) {
+void QToolkit::CreatePath(const char *path) {
     QDir dir;
     // 如果目录不存在，创建目录
     if (dir.mkpath(path)) {
@@ -51,7 +51,7 @@ void Toolkit::CreatePath(const char *path) {
     }
 }
 
-uint8_t Toolkit::ReadFile(const char *path, unsigned char *buff, unsigned long nlen) {
+uint8_t QToolkit::ReadFile(const char *path, unsigned char *buff, unsigned long nlen) {
     QFile file(path);
     if (!file.open(QIODevice::ReadOnly)) {
         qDebug() << "Unable to open file!";
@@ -64,17 +64,17 @@ uint8_t Toolkit::ReadFile(const char *path, unsigned char *buff, unsigned long n
     return 1;
 }
 
-uint8_t Toolkit::ReadConfigFile(const char *Path, float *nValue) {
+uint8_t QToolkit::ReadConfigFile(const char *Path, float *nValue) {
     if (!QFile::exists(Path))
         return 0;
     // 创建 QSettings 实例
-    QSettings settings("System.ini", QSettings::IniFormat);
+    QSettings settings("system.ini", QSettings::IniFormat);
 
     for (int i = 0; i < SYSTEM_PARA_TOTAL; ++i) {
         // 读取各个配置项
         QString key = QString("para%1").arg(i);
         nValue[i] = settings.value(key, 0).toFloat();
-        Toolkit::WriteLogFile(settings.value(key, 0).toString().toStdString().data());
+        QToolkit::WriteLogFile(settings.value(key, 0).toString().toStdString().data());
     }
 
     return 1;

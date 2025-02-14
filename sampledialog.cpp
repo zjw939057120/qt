@@ -7,6 +7,7 @@ SampleDialog::SampleDialog(QWidget *parent)
 {
     ui->setupUi(this);
     m_MainWindow = parent;
+    m_SampleDialogEx = new SampleDialogEx(parent);
     InitEnv();
 }
 
@@ -20,8 +21,8 @@ void SampleDialog::InitEnv() {
 }
 
 void SampleDialog::Init() {
-    Toolkit::LineEditBorder(this);
-    Toolkit::MinMaxButtonsHint(this);
+    QToolkit::LineEditBorder(this);
+    QToolkit::MinMaxButtonsHint(this);
 }
 
 void SampleDialog::retranslateUi() {

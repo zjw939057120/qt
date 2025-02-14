@@ -2,7 +2,8 @@
 #define QUEUESETTINGDIALOG_H
 
 #include <QDialog>
-#include "Toolkit.h"
+#include "include/QToolkit.h"
+#include "QueueSettingDialogEx.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -30,5 +31,6 @@ private slots:
 private:
     Ui::QueueSettingDialog *ui;
     QWidget *m_MainWindow;
+    QueueSettingDialogEx *m_QueueSettingDialogEx;
 };
 #endif // QUEUESETTINGDIALOG_H

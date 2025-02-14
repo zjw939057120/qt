@@ -1,7 +1,6 @@
 #include <QTranslator>
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "manualdialog.h"
 #include <QApplication>
 #include <QLocale>
 #include <QTranslator>
@@ -10,6 +9,7 @@
 MainWindow::MainWindow(QWidget *parent)
         : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
+    m_MainWindowEx = new MainWindowEx(parent);
     InitEnv();
 }
 
@@ -106,26 +106,25 @@ void MainWindow::InitEnv() {
 }
 
 void MainWindow::Init() {
-    Toolkit::LineEditBorder(this);
+    QToolkit::LineEditBorder(this);
 #ifdef __linux__
     Utils::windowMinMaxButtonsHint(this);
 #endif
 
-    Toolkit::CreatePath("Log");
-    Toolkit::CreatePath("Queue");
-    Toolkit::CreatePath("Method");
-    Toolkit::WriteLogFile("打开软件");
+    QToolkit::CreatePath(DATA_PATH);
+    QToolkit::CreatePath(LOG_PATH);
+    QToolkit::WriteLogFile("打开软件");
     uint8_t nFlag;
-    nFlag = Toolkit::ReadFile(".\\Queue\\QueueFile.bin", (unsigned char *) &QueueDlg, sizeof(STRQUEUE) * QUEUE_TOTAL);
-    if (!nFlag) Toolkit::WriteLogFile("没有找到队列文件");        //添加log日志
+    nFlag = QToolkit::ReadFile(QUEUE_FILE_PATH, (unsigned char *) &QueueDlg, sizeof(STRQUEUE) * QUEUE_TOTAL);
+    if (!nFlag) QToolkit::WriteLogFile("没有找到队列文件");        //添加log日志
 
-    nFlag = Toolkit::ReadFile(".\\Method\\MethodFile.bin", (unsigned char *) &MethodDlg,
+    nFlag = QToolkit::ReadFile(METHOD_FILE_PATH, (unsigned char *) &MethodDlg,
                               sizeof(STRMETHOD) * METHOD_TOTAL);
-    if (!nFlag) Toolkit::WriteLogFile("没有找到方法文件");        //添加log日志
-    nFlag = Toolkit::ReadConfigFile("System.ini", VariaDlg.SystemPara);
+    if (!nFlag) QToolkit::WriteLogFile("没有找到方法文件");        //添加log日志
+    nFlag = QToolkit::ReadConfigFile(SETTING_FILE_PATH, VariaDlg.SystemPara);
     if (!nFlag) {
-        Toolkit::WriteLogFile("没有找到系统配置文件");        //添加log日志
-        QMessageBox::warning(nullptr, "错误", "读取配置文件失败，请检查文件");
+        QToolkit::WriteLogFile("没有找到系统配置文件");        //添加log日志
+        QMessageBox::warning(nullptr, "错误", "读取配置文件失败,请检查文件");
         exit(0);
     }
 }

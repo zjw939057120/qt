@@ -2,7 +2,8 @@
 #define RECORDDIALOG_H
 
 #include <QDialog>
-#include "Toolkit.h"
+#include "include/QToolkit.h"
+#include "RecordDialogEx.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -27,5 +28,6 @@ private slots:
 private:
     Ui::RecordDialog *ui;
     QWidget *m_MainWindow;
+    RecordDialogEx *m_RecordDialogEx;
 };
 #endif // RECORDDIALOG_H

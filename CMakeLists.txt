@@ -13,12 +13,11 @@ find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets LinguistTools)
 
 qt_standard_project_setup()
 
+include_directories(include)
+
 qt_add_executable(widget
         WIN32 MACOSX_BUNDLE
         main.cpp
-        Utils.cpp
-        Toolkit.cpp
-
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
@@ -62,9 +61,30 @@ qt_add_executable(widget
         resources.qrc
         resource.rc
 
-        modbus.cpp
-        socket.cpp
-        uart.cpp
+        src/Utils.cpp
+        include/Utils.h
+        src/QToolkit.cpp
+        include/QToolkit.h
+        src/AboutDialogEx.cpp
+        include/AboutDialogEx.h
+        src/FAQDialogEx.cpp
+        include/FAQDialogEx.h
+        src/MainWindowEx.cpp
+        include/MainWindowEx.h
+        src/ManualDialogEx.cpp
+        include/ManualDialogEx.h
+        src/MethodDialogEx.cpp
+        include/MethodDialogEx.h
+        src/QueueDialogEx.cpp
+        include/QueueDialogEx.h
+        src/QueueSettingDialogEx.cpp
+        include/QueueSettingDialogEx.h
+        src/RecordDialogEx.cpp
+        include/RecordDialogEx.h
+        src/ReviseDialogEx.cpp
+        include/ReviseDialogEx.h
+        src/SampleDialogEx.cpp
+        include/SampleDialogEx.h
         )
 
 qt_add_translations(
@@ -82,7 +102,6 @@ target_link_libraries(widget
 target_link_libraries(widget
         PRIVATE
         ws2_32
-        Pcomm.lib
         )
 include(GNUInstallDirs)
 

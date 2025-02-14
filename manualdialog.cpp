@@ -7,6 +7,7 @@ ManualDialog::ManualDialog(QWidget *parent)
 {
     ui->setupUi(this);
     m_MainWindow = parent;
+    m_ManualDialogEx = new ManualDialogEx(parent);
     InitEnv();
 }
 
@@ -24,8 +25,8 @@ void ManualDialog::InitEnv() {
 }
 
 void ManualDialog::Init() {
-    Toolkit::LineEditBorder(this);
-    Toolkit::MinMaxButtonsHint(this);
+    QToolkit::LineEditBorder(this);
+    QToolkit::MinMaxButtonsHint(this);
 }
 
 void ManualDialog::on_pushButton_Close_clicked()

@@ -2,7 +2,8 @@
 #define METHODDIALOG_H
 
 #include <QDialog>
-#include "Toolkit.h"
+#include "include/QToolkit.h"
+#include "MethodDialogEx.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -29,5 +30,6 @@ private slots:
 private:
     Ui::MethodDialog *ui;
     QWidget *m_MainWindow;
+    MethodDialogEx *m_MethodDialogEx;
 };
 #endif // METHODDIALOG_H

@@ -11,7 +11,8 @@
 #include "recorddialog.h"
 #include "revisedialog.h"
 #include "sampledialog.h"
-#include "mydefine.h"
+#include "include/mydefine.h"
+#include "MainWindowEx.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -67,6 +68,7 @@ private:
     Ui::MainWindow *ui;
 
 public:
+    MainWindowEx *m_MainWindowEx;
     AboutDialog *m_AboutDialog;
     FAQDialog *m_FAQDialog;
     ManualDialog *m_ManualDialog;

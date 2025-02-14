@@ -2,7 +2,8 @@
 #define FAQDIALOG_H
 
 #include <QDialog>
-#include "Toolkit.h"
+#include "include/QToolkit.h"
+#include "FaqDialogEx.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -27,5 +28,6 @@ private slots:
 private:
     Ui::FAQDialog *ui;
     QWidget *m_MainWindow;
+    FAQDialogEx *m_FAQDialogEx;
 };
 #endif // FAQDIALOG_H

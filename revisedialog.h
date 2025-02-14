@@ -2,7 +2,8 @@
 #define REVISEDIALOG_H
 
 #include <QDialog>
-#include "Toolkit.h"
+#include "include/QToolkit.h"
+#include "ReviseDialogEx.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -33,5 +34,6 @@ private slots:
 private:
     Ui::ReviseDialog *ui;
     QWidget *m_MainWindow;
+    ReviseDialogEx *m_ReviseDialogEx;
 };
 #endif // REVISEDIALOG_H

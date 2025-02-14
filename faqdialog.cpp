@@ -7,6 +7,7 @@ FAQDialog::FAQDialog(QWidget *parent)
 {
     ui->setupUi(this);
     m_MainWindow = parent;
+    m_FAQDialogEx = new FAQDialogEx(parent);
     InitEnv();
 }
 
@@ -24,8 +25,8 @@ void FAQDialog::InitEnv() {
 }
 
 void FAQDialog::Init() {
-    Toolkit::LineEditBorder(this);
-    Toolkit::MinMaxButtonsHint(this);
+    QToolkit::LineEditBorder(this);
+    QToolkit::MinMaxButtonsHint(this);
 }
 
 void FAQDialog::on_pushButton_Close_clicked()
