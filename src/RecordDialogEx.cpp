@@ -3,6 +3,7 @@
 //
 
 #include "../include/RecordDialogEx.h"
+#include "Toolkit.h"
 
 RecordDialogEx::RecordDialogEx(QWidget *parent) {
 

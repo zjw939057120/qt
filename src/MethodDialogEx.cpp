@@ -3,6 +3,7 @@
 //
 
 #include "../include/MethodDialogEx.h"
+#include "Toolkit.h"
 
 MethodDialogEx::MethodDialogEx(QWidget *parent) {
 

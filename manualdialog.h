@@ -2,27 +2,31 @@
 #define MANUALDIALOG_H
 
 #include <QDialog>
-#include "include/QToolkit.h"
+
 #include "ManualDialogEx.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
-class ManualDialog;
+    class ManualDialog;
 }
 QT_END_NAMESPACE
 
-class ManualDialog : public QDialog
-{
-    Q_OBJECT
+class ManualDialog : public QDialog {
+Q_OBJECT
 
 public:
     ManualDialog(QWidget *parent = nullptr);
+
     ~ManualDialog();
+
     void InitEnv();
+
     void Init();
+
     void retranslateUi();
 
 private slots:
+
     void on_pushButton_Close_clicked();
 
 private:
@@ -31,4 +35,5 @@ private:
     ManualDialogEx *m_ManualDialogEx;
 
 };
+
 #endif // MANUALDIALOG_H

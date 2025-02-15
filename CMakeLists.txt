@@ -63,8 +63,8 @@ qt_add_executable(widget
 
         src/Utils.cpp
         include/Utils.h
-        src/QToolkit.cpp
-        include/QToolkit.h
+        src/Toolkit.cpp
+        include/Toolkit.h
         src/AboutDialogEx.cpp
         include/AboutDialogEx.h
         src/FAQDialogEx.cpp

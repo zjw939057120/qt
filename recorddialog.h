@@ -2,27 +2,31 @@
 #define RECORDDIALOG_H
 
 #include <QDialog>
-#include "include/QToolkit.h"
+
 #include "RecordDialogEx.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
-class RecordDialog;
+    class RecordDialog;
 }
 QT_END_NAMESPACE
 
-class RecordDialog : public QDialog
-{
-    Q_OBJECT
+class RecordDialog : public QDialog {
+Q_OBJECT
 
 public:
     RecordDialog(QWidget *parent = nullptr);
+
     ~RecordDialog();
+
     void InitEnv();
+
     void Init();
+
     void retranslateUi();
 
 private slots:
+
     void on_pushButton_Close_clicked();
 
 private:
@@ -30,4 +34,5 @@ private:
     QWidget *m_MainWindow;
     RecordDialogEx *m_RecordDialogEx;
 };
+
 #endif // RECORDDIALOG_H

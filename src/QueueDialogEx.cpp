@@ -3,6 +3,7 @@
 //
 
 #include "../include/QueueDialogEx.h"
+#include "Toolkit.h"
 
 QueueDialogEx::QueueDialogEx(QWidget *parent) {
 

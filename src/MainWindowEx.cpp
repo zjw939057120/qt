@@ -3,6 +3,7 @@
 //
 
 #include "../include/MainWindowEx.h"
+#include "Toolkit.h"
 
 MainWindowEx::MainWindowEx(QWidget *parent) {
 

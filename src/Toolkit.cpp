@@ -2,7 +2,7 @@
 // Created by zjw93 on 2025/2/11.
 //
 
-#include "../include/QToolkit.h"
+#include "../include/Toolkit.h"
 #include "../include/mydefine.h"
 #include <QDebug>
 #include <QDir>
@@ -11,16 +11,16 @@
 #include <QDateTime>
 #include <QSettings>
 
-void QToolkit::LineEditBorder(QWidget *qWidget) {
+void Toolkit::LineEditBorder(QWidget *qWidget) {
     qWidget->setStyleSheet("QLineEdit { border: none; }");
 }
 
-void QToolkit::MinMaxButtonsHint(QWidget *qWidget) {
+void Toolkit::MinMaxButtonsHint(QWidget *qWidget) {
     qWidget->setWindowFlags(qWidget->windowFlags() & ~Qt::WindowMinMaxButtonsHint);
 
 }
 
-void QToolkit::WriteLogFile(const char *message) {
+void Toolkit::WriteLogFile(const char *message) {
     // 创建日志文件（如果文件不存在则会创建）
     QString qString = QString(LOG_FILE_PATH).arg(QDateTime::currentDateTime().toString("yyyy-MM-dd"));
     QFile file(qString);
@@ -41,7 +41,7 @@ void QToolkit::WriteLogFile(const char *message) {
     }
 }
 
-void QToolkit::CreatePath(const char *path) {
+void Toolkit::CreatePath(const char *path) {
     QDir dir;
     // 如果目录不存在，创建目录
     if (dir.mkpath(path)) {
@@ -51,7 +51,7 @@ void QToolkit::CreatePath(const char *path) {
     }
 }
 
-uint8_t QToolkit::ReadFile(const char *path, unsigned char *buff, unsigned long nlen) {
+uint8_t Toolkit::ReadFile(const char *path, unsigned char *buff, unsigned long nlen) {
     QFile file(path);
     if (!file.open(QIODevice::ReadOnly)) {
         qDebug() << "Unable to open file!";
@@ -64,7 +64,7 @@ uint8_t QToolkit::ReadFile(const char *path, unsigned char *buff, unsigned long 
     return 1;
 }
 
-uint8_t QToolkit::ReadConfigFile(const char *Path, float *nValue) {
+uint8_t Toolkit::ReadConfigFile(const char *Path, float *nValue) {
     if (!QFile::exists(Path))
         return 0;
     // 创建 QSettings 实例
@@ -74,7 +74,7 @@ uint8_t QToolkit::ReadConfigFile(const char *Path, float *nValue) {
         // 读取各个配置项
         QString key = QString("para%1").arg(i);
         nValue[i] = settings.value(key, 0).toFloat();
-        QToolkit::WriteLogFile(settings.value(key, 0).toString().toStdString().data());
+        Toolkit::WriteLogFile(settings.value(key, 0).toString().toStdString().data());
     }
 
     return 1;

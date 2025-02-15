@@ -5,6 +5,7 @@
 #include <QLocale>
 #include <QTranslator>
 #include <QMessageBox>
+#include "Toolkit.h"
 
 MainWindow::MainWindow(QWidget *parent)
         : QMainWindow(parent), ui(new Ui::MainWindow) {
@@ -106,24 +107,24 @@ void MainWindow::InitEnv() {
 }
 
 void MainWindow::Init() {
-    QToolkit::LineEditBorder(this);
+    Toolkit::LineEditBorder(this);
 #ifdef __linux__
     Utils::windowMinMaxButtonsHint(this);
 #endif
 
-    QToolkit::CreatePath(DATA_PATH);
-    QToolkit::CreatePath(LOG_PATH);
-    QToolkit::WriteLogFile("打开软件");
+    Toolkit::CreatePath(DATA_PATH);
+    Toolkit::CreatePath(LOG_PATH);
+    Toolkit::WriteLogFile("打开软件");
     uint8_t nFlag;
-    nFlag = QToolkit::ReadFile(QUEUE_FILE_PATH, (unsigned char *) &QueueDlg, sizeof(STRQUEUE) * QUEUE_TOTAL);
-    if (!nFlag) QToolkit::WriteLogFile("没有找到队列文件");        //添加log日志
+    nFlag = Toolkit::ReadFile(QUEUE_FILE_PATH, (unsigned char *) &QueueDlg, sizeof(STRQUEUE) * QUEUE_TOTAL);
+    if (!nFlag) Toolkit::WriteLogFile("没有找到队列文件");        //添加log日志
 
-    nFlag = QToolkit::ReadFile(METHOD_FILE_PATH, (unsigned char *) &MethodDlg,
+    nFlag = Toolkit::ReadFile(METHOD_FILE_PATH, (unsigned char *) &MethodDlg,
                               sizeof(STRMETHOD) * METHOD_TOTAL);
-    if (!nFlag) QToolkit::WriteLogFile("没有找到方法文件");        //添加log日志
-    nFlag = QToolkit::ReadConfigFile(SETTING_FILE_PATH, VariaDlg.SystemPara);
+    if (!nFlag) Toolkit::WriteLogFile("没有找到方法文件");        //添加log日志
+    nFlag = Toolkit::ReadConfigFile(SETTING_FILE_PATH, VariaDlg.SystemPara);
     if (!nFlag) {
-        QToolkit::WriteLogFile("没有找到系统配置文件");        //添加log日志
+        Toolkit::WriteLogFile("没有找到系统配置文件");        //添加log日志
         QMessageBox::warning(nullptr, "错误", "读取配置文件失败,请检查文件");
         exit(0);
     }

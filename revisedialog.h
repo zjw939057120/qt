@@ -2,27 +2,31 @@
 #define REVISEDIALOG_H
 
 #include <QDialog>
-#include "include/QToolkit.h"
+
 #include "ReviseDialogEx.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
-class ReviseDialog;
+    class ReviseDialog;
 }
 QT_END_NAMESPACE
 
-class ReviseDialog : public QDialog
-{
-    Q_OBJECT
+class ReviseDialog : public QDialog {
+Q_OBJECT
 
 public:
     ReviseDialog(QWidget *parent = nullptr);
+
     ~ReviseDialog();
+
     void InitEnv();
+
     void Init();
+
     void retranslateUi();
 
 private slots:
+
     void on_pushButton_ReviseCoordinates_clicked();
 
     void on_pushButton_SettingParameter_clicked();
@@ -36,4 +40,5 @@ private:
     QWidget *m_MainWindow;
     ReviseDialogEx *m_ReviseDialogEx;
 };
+
 #endif // REVISEDIALOG_H

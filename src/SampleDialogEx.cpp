@@ -3,6 +3,7 @@
 //
 
 #include "../include/SampleDialogEx.h"
+#include "Toolkit.h"
 
 SampleDialogEx::SampleDialogEx(QWidget *parent) {
 

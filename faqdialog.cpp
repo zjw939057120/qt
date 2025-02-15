@@ -1,18 +1,16 @@
 #include "faqdialog.h"
 #include "./ui_faqdialog.h"
+#include "Toolkit.h"
 
 FAQDialog::FAQDialog(QWidget *parent)
-    : QDialog(parent)
-    , ui(new Ui::FAQDialog)
-{
+        : QDialog(parent), ui(new Ui::FAQDialog) {
     ui->setupUi(this);
     m_MainWindow = parent;
-    m_FAQDialogEx = new FAQDialogEx(parent);
+    m_FaqDialogEx = new FAQDialogEx(parent);
     InitEnv();
 }
 
-FAQDialog::~FAQDialog()
-{
+FAQDialog::~FAQDialog() {
     delete ui;
 }
 
@@ -25,12 +23,11 @@ void FAQDialog::InitEnv() {
 }
 
 void FAQDialog::Init() {
-    QToolkit::LineEditBorder(this);
-    QToolkit::MinMaxButtonsHint(this);
+    Toolkit::LineEditBorder(this);
+    Toolkit::MinMaxButtonsHint(this);
 }
 
-void FAQDialog::on_pushButton_Close_clicked()
-{
+void FAQDialog::on_pushButton_Close_clicked() {
     close();
 }
 

@@ -2,8 +2,8 @@
 // Created by zjw93 on 2025/2/11.
 //
 
-#ifndef WIDGET_QTOOLKIT_H
-#define WIDGET_QTOOLKIT_H
+#ifndef WIDGET_TOOLKIT_H
+#define WIDGET_TOOLKIT_H
 
 #include <QWidget>
 #include "Utils.h"
@@ -15,7 +15,7 @@
 #define  LOG_PATH "Log"
 #define  LOG_FILE_PATH "Log/Log%1.txt"
 
-class QToolkit {
+class Toolkit {
 
 public:
     static void LineEditBorder(QWidget *qWidget);
@@ -32,4 +32,4 @@ public:
 };
 
 
-#endif //WIDGET_QTOOLKIT_H
+#endif //WIDGET_TOOLKIT_H

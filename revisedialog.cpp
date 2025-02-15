@@ -1,18 +1,16 @@
 #include "revisedialog.h"
 #include "./ui_revisedialog.h"
+#include "Toolkit.h"
 
 ReviseDialog::ReviseDialog(QWidget *parent)
-    : QDialog(parent)
-    , ui(new Ui::ReviseDialog)
-{
+        : QDialog(parent), ui(new Ui::ReviseDialog) {
     ui->setupUi(this);
     m_MainWindow = parent;
     m_ReviseDialogEx = new ReviseDialogEx(parent);
     InitEnv();
 }
 
-ReviseDialog::~ReviseDialog()
-{
+ReviseDialog::~ReviseDialog() {
     delete ui;
 }
 
@@ -21,34 +19,30 @@ void ReviseDialog::InitEnv() {
 }
 
 void ReviseDialog::Init() {
-    QToolkit::LineEditBorder(this);
-    QToolkit::MinMaxButtonsHint(this);
+    Toolkit::LineEditBorder(this);
+    Toolkit::MinMaxButtonsHint(this);
 }
 
 void ReviseDialog::retranslateUi() {
     ui->retranslateUi(this);
 }
 
-void ReviseDialog::on_pushButton_ReviseCoordinates_clicked()
-{
+void ReviseDialog::on_pushButton_ReviseCoordinates_clicked() {
 
 }
 
 
-void ReviseDialog::on_pushButton_SettingParameter_clicked()
-{
+void ReviseDialog::on_pushButton_SettingParameter_clicked() {
 
 }
 
 
-void ReviseDialog::on_pushButton_ReadData_clicked()
-{
+void ReviseDialog::on_pushButton_ReadData_clicked() {
 
 }
 
 
-void ReviseDialog::on_pushButton_SingleStep_clicked()
-{
+void ReviseDialog::on_pushButton_SingleStep_clicked() {
 
 }
 

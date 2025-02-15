@@ -1,18 +1,16 @@
 #include "manualdialog.h"
 #include "./ui_manualdialog.h"
+#include "Toolkit.h"
 
 ManualDialog::ManualDialog(QWidget *parent)
-    : QDialog(parent)
-    , ui(new Ui::ManualDialog)
-{
+        : QDialog(parent), ui(new Ui::ManualDialog) {
     ui->setupUi(this);
     m_MainWindow = parent;
     m_ManualDialogEx = new ManualDialogEx(parent);
     InitEnv();
 }
 
-ManualDialog::~ManualDialog()
-{
+ManualDialog::~ManualDialog() {
     delete ui;
 }
 
@@ -25,12 +23,11 @@ void ManualDialog::InitEnv() {
 }
 
 void ManualDialog::Init() {
-    QToolkit::LineEditBorder(this);
-    QToolkit::MinMaxButtonsHint(this);
+    Toolkit::LineEditBorder(this);
+    Toolkit::MinMaxButtonsHint(this);
 }
 
-void ManualDialog::on_pushButton_Close_clicked()
-{
+void ManualDialog::on_pushButton_Close_clicked() {
     close();
 }
 

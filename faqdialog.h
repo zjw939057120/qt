@@ -2,32 +2,37 @@
 #define FAQDIALOG_H
 
 #include <QDialog>
-#include "include/QToolkit.h"
-#include "FaqDialogEx.h"
+
+#include "FAQDialogEx.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
-class FAQDialog;
+    class FAQDialog;
 }
 QT_END_NAMESPACE
 
-class FAQDialog : public QDialog
-{
-    Q_OBJECT
+class FAQDialog : public QDialog {
+Q_OBJECT
 
 public:
     FAQDialog(QWidget *parent = nullptr);
+
     ~FAQDialog();
+
     void InitEnv();
+
     void Init();
+
     void retranslateUi();
 
 private slots:
+
     void on_pushButton_Close_clicked();
 
 private:
     Ui::FAQDialog *ui;
     QWidget *m_MainWindow;
-    FAQDialogEx *m_FAQDialogEx;
+    FAQDialogEx *m_FaqDialogEx;
 };
+
 #endif // FAQDIALOG_H

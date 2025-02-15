@@ -3,7 +3,7 @@
 //
 
 #include "../include/FAQDialogEx.h"
-
+#include "Toolkit.h"
 
 FAQDialogEx::FAQDialogEx(QWidget *parent) {
 

@@ -3,6 +3,7 @@
 //
 
 #include "../include/ReviseDialogEx.h"
+#include "Toolkit.h"
 
 ReviseDialogEx::ReviseDialogEx(QWidget *parent) {
 

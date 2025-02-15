@@ -1,19 +1,17 @@
 #include <QTranslator>
 #include "aboutdialog.h"
 #include "./ui_aboutdialog.h"
+#include "Toolkit.h"
 
 AboutDialog::AboutDialog(QWidget *parent)
-    : QDialog(parent)
-    , ui(new Ui::AboutDialog)
-{
+        : QDialog(parent), ui(new Ui::AboutDialog) {
     ui->setupUi(this);
     m_MainWindow = parent;
     m_AboutDialogEx = new AboutDialogEx(parent);
     InitEnv();
 }
 
-AboutDialog::~AboutDialog()
-{
+AboutDialog::~AboutDialog() {
     delete ui;
 }
 
@@ -26,11 +24,10 @@ void AboutDialog::InitEnv() {
 }
 
 void AboutDialog::Init() {
-    QToolkit::LineEditBorder(this);
+    Toolkit::LineEditBorder(this);
 
 }
 
-void AboutDialog::on_pushButton_Close_clicked()
-{
+void AboutDialog::on_pushButton_Close_clicked() {
     close();
 }

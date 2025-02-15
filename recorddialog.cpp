@@ -1,18 +1,16 @@
 #include "recorddialog.h"
 #include "./ui_recorddialog.h"
+#include "Toolkit.h"
 
 RecordDialog::RecordDialog(QWidget *parent)
-    : QDialog(parent)
-    , ui(new Ui::RecordDialog)
-{
+        : QDialog(parent), ui(new Ui::RecordDialog) {
     ui->setupUi(this);
     m_MainWindow = parent;
     m_RecordDialogEx = new RecordDialogEx(parent);
     InitEnv();
 }
 
-RecordDialog::~RecordDialog()
-{
+RecordDialog::~RecordDialog() {
     delete ui;
 }
 
@@ -21,16 +19,15 @@ void RecordDialog::InitEnv() {
 }
 
 void RecordDialog::Init() {
-    QToolkit::LineEditBorder(this);
-    QToolkit::MinMaxButtonsHint(this);
+    Toolkit::LineEditBorder(this);
+    Toolkit::MinMaxButtonsHint(this);
 }
 
 void RecordDialog::retranslateUi() {
     ui->retranslateUi(this);
 }
 
-void RecordDialog::on_pushButton_Close_clicked()
-{
+void RecordDialog::on_pushButton_Close_clicked() {
     close();
 }
 

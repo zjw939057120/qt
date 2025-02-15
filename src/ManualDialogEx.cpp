@@ -3,6 +3,7 @@
 //
 
 #include "../include/ManualDialogEx.h"
+#include "Toolkit.h"
 
 ManualDialogEx::ManualDialogEx(QWidget *parent) {
 
