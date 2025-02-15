@@ -13,7 +13,7 @@
 #define  METHOD_FILE_PATH  "Data/Method.bin"
 #define  QUEUE_FILE_PATH "Data/Queue.bin"
 #define  LOG_PATH "Log"
-#define  LOG_FILE_PATH "Log/Log%1.txt"
+#define  LOG_FILE_PATH "Log/Log-%1.txt"
 
 class Toolkit {
 

@@ -8,15 +8,11 @@ QueueDialog::QueueDialog(QWidget *parent)
     ui->setupUi(this);
     m_MainWindow = parent;
     m_QueueDialogEx = new QueueDialogEx(parent);
-    InitEnv();
+    Init();
 }
 
 QueueDialog::~QueueDialog() {
     delete ui;
-}
-
-void QueueDialog::InitEnv() {
-    Init();
 }
 
 void QueueDialog::Init() {

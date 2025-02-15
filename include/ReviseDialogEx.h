@@ -10,6 +10,8 @@
 class ReviseDialogEx {
 public:
     ReviseDialogEx(QWidget *parent);
+
+    void Init();
 };
 
 

@@ -7,7 +7,7 @@ FAQDialog::FAQDialog(QWidget *parent)
     ui->setupUi(this);
     m_MainWindow = parent;
     m_FaqDialogEx = new FAQDialogEx(parent);
-    InitEnv();
+    Init();
 }
 
 FAQDialog::~FAQDialog() {
@@ -16,10 +16,6 @@ FAQDialog::~FAQDialog() {
 
 void FAQDialog::retranslateUi() {
     ui->retranslateUi(this);
-}
-
-void FAQDialog::InitEnv() {
-    Init();
 }
 
 void FAQDialog::Init() {

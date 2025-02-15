@@ -10,6 +10,8 @@
 class QueueSettingDialogEx {
 public:
     QueueSettingDialogEx(QWidget *parent);
+
+    void Init();
 };
 
 

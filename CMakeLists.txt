@@ -10,7 +10,7 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
 find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets LinguistTools)
-
+find_package(Qt6 6.5 REQUIRED COMPONENTS Charts SerialPort)
 qt_standard_project_setup()
 
 include_directories(include)
@@ -85,6 +85,9 @@ qt_add_executable(widget
         include/ReviseDialogEx.h
         src/SampleDialogEx.cpp
         include/SampleDialogEx.h
+
+        src/modbus.cpp
+        src/uart.cpp
         )
 
 qt_add_translations(

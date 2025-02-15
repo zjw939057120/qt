@@ -7,15 +7,11 @@ MethodDialog::MethodDialog(QWidget *parent)
     ui->setupUi(this);
     m_MainWindow = parent;
     m_MethodDialogEx = new MethodDialogEx(parent);
-    InitEnv();
+    Init();
 }
 
 MethodDialog::~MethodDialog() {
     delete ui;
-}
-
-void MethodDialog::InitEnv() {
-    Init();
 }
 
 void MethodDialog::Init() {

@@ -10,6 +10,8 @@
 class ManualDialogEx {
 public:
     ManualDialogEx(QWidget *parent);
+
+    void Init();
 };
 
 

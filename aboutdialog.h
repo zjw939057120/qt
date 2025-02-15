@@ -18,8 +18,6 @@ public:
 
     ~AboutDialog();
 
-    void InitEnv();
-
     void Init();
 
     void retranslateUi();

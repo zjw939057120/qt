@@ -10,6 +10,8 @@
 class SampleDialogEx {
 public:
     SampleDialogEx(QWidget *parent);
+
+    void Init();
 };
 
 

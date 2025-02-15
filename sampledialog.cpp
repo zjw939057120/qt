@@ -7,15 +7,11 @@ SampleDialog::SampleDialog(QWidget *parent)
     ui->setupUi(this);
     m_MainWindow = parent;
     m_SampleDialogEx = new SampleDialogEx(parent);
-    InitEnv();
+    Init();
 }
 
 SampleDialog::~SampleDialog() {
     delete ui;
-}
-
-void SampleDialog::InitEnv() {
-    Init();
 }
 
 void SampleDialog::Init() {

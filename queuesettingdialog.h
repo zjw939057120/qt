@@ -19,8 +19,6 @@ public:
 
     ~QueueSettingDialog();
 
-    void InitEnv();
-
     void Init();
 
     void retranslateUi();

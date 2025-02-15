@@ -19,8 +19,6 @@ public:
 
     ~SampleDialog();
 
-    void InitEnv();
-
     void Init();
 
     void retranslateUi();

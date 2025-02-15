@@ -2,9 +2,14 @@
 // Created by Administrator on 2025/2/15.
 //
 
-#include "../include/SampleDialogEx.h"
+#include "SampleDialogEx.h"
 #include "Toolkit.h"
+#include "mydefine.h"
 
 SampleDialogEx::SampleDialogEx(QWidget *parent) {
+    Init();
+}
+
+void SampleDialogEx::Init() {
 
 }

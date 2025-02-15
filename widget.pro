@@ -1,5 +1,5 @@
 QT       += core gui
-
+QT       += charts serialport
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++17
@@ -21,9 +21,6 @@ SOURCES += \
     revisedialog.cpp \
     sampledialog.cpp \
 
-    Utils.cpp \
-    Toolkit.cpp \
-
 HEADERS += \
     mainwindow.h \
     aboutdialog.h \
@@ -36,9 +33,35 @@ HEADERS += \
     revisedialog.h \
     sampledialog.h \
 
-    mydefine.h \
-    Utils.h \
-    Toolkit.h \
+INCLUDEPATH += include
+
+SOURCES += \
+        src/Utils.cpp \
+        src/Toolkit.cpp \
+        src/AboutDialogEx.cpp \
+        src/FAQDialogEx.cpp \
+        src/MainWindowEx.cpp \
+        src/ManualDialogEx.cpp \
+        src/MethodDialogEx.cpp \
+        src/QueueDialogEx.cpp \
+        src/QueueSettingDialogEx.cpp \
+        src/RecordDialogEx.cpp \
+        src/ReviseDialogEx.cpp \
+        src/SampleDialogEx.cpp \
+
+HEADERS += \
+        include/Utils.h
+        include/Toolkit.h
+        include/AboutDialogEx.h
+        include/FAQDialogEx.h
+        include/MainWindowEx.h
+        include/ManualDialogEx.h
+        include/MethodDialogEx.h
+        include/QueueDialogEx.h
+        include/QueueSettingDialogEx.h
+        include/RecordDialogEx.h
+        include/ReviseDialogEx.h
+        include/SampleDialogEx.h
 
 FORMS += \
     mainwindow.ui \

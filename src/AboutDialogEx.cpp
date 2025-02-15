@@ -2,9 +2,14 @@
 // Created by Administrator on 2025/2/15.
 //
 
-#include "../include/AboutDialogEx.h"
+#include "AboutDialogEx.h"
 #include "Toolkit.h"
+#include "mydefine.h"
 
 AboutDialogEx::AboutDialogEx(QWidget *parent) {
+    Init();
+}
+
+void AboutDialogEx::Init() {
 
 }

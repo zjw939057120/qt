@@ -2,8 +2,8 @@
 // Created by zjw93 on 2025/2/11.
 //
 
-#include "../include/Toolkit.h"
-#include "../include/mydefine.h"
+#include "Toolkit.h"
+#include "mydefine.h"
 #include <QDebug>
 #include <QDir>
 #include <QFile>
@@ -18,6 +18,28 @@ void Toolkit::LineEditBorder(QWidget *qWidget) {
 void Toolkit::MinMaxButtonsHint(QWidget *qWidget) {
     qWidget->setWindowFlags(qWidget->windowFlags() & ~Qt::WindowMinMaxButtonsHint);
 
+}
+
+
+void WriteLogFile(char *nText) {
+    // 创建日志文件（如果文件不存在则会创建）
+    QString qString = QString(LOG_FILE_PATH).arg(QDateTime::currentDateTime().toString("yyyy-MM-dd"));
+    QFile file(qString);
+
+    // 以追加模式打开文件
+    if (file.open(QIODevice::Append | QIODevice::Text)) {
+        QTextStream out(&file);
+
+        // 获取当前时间戳
+        QString currentTime = QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss ");
+
+        // 写入日志，包含时间戳
+        out << currentTime << nText << "\n";
+
+        file.close();  // 关闭文件
+    } else {
+        qDebug() << "Unable to open log file for writing!";
+    }
 }
 
 void Toolkit::WriteLogFile(const char *message) {
@@ -68,7 +90,7 @@ uint8_t Toolkit::ReadConfigFile(const char *Path, float *nValue) {
     if (!QFile::exists(Path))
         return 0;
     // 创建 QSettings 实例
-    QSettings settings("system.ini", QSettings::IniFormat);
+    QSettings settings(Path, QSettings::IniFormat);
 
     for (int i = 0; i < SYSTEM_PARA_TOTAL; ++i) {
         // 读取各个配置项

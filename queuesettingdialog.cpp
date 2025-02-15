@@ -7,19 +7,15 @@ QueueSettingDialog::QueueSettingDialog(QWidget *parent)
     ui->setupUi(this);
     m_MainWindow = parent;
     m_QueueSettingDialogEx = new QueueSettingDialogEx(parent);
-    InitEnv();
+    Init();
 }
 
 QueueSettingDialog::~QueueSettingDialog() {
     delete ui;
 }
 
-void QueueSettingDialog::InitEnv() {
-    this->setModal(true);
-    Init();
-}
-
 void QueueSettingDialog::Init() {
+    this->setModal(true);
     Toolkit::LineEditBorder(this);
     Toolkit::MinMaxButtonsHint(this);
 }

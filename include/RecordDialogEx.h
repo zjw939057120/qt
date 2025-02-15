@@ -10,6 +10,8 @@
 class RecordDialogEx {
 public:
     RecordDialogEx(QWidget *parent);
+
+    void Init();
 };
 
 

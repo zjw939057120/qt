@@ -11,6 +11,8 @@ class MethodDialogEx {
 
 public:
     MethodDialogEx(QWidget *parent);
+
+    void Init();
 };
 
 

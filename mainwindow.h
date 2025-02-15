@@ -28,8 +28,6 @@ public:
 
     ~MainWindow();
 
-    void InitEnv();
-
     void Init();
 
     void retranslateUi(const QString &lang);

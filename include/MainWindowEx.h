@@ -11,6 +11,8 @@ class MainWindowEx {
 
 public:
     MainWindowEx(QWidget *parent);
+
+    void Init();
 };
 
 

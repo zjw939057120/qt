@@ -11,6 +11,8 @@ class QueueDialogEx {
 
 public:
     QueueDialogEx(QWidget *parent);
+
+    void Init();
 };
 
 

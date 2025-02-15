@@ -19,8 +19,6 @@ public:
 
     ~QueueDialog();
 
-    void InitEnv();
-
     void Init();
 
     void retranslateUi();

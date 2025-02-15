@@ -7,15 +7,11 @@ ReviseDialog::ReviseDialog(QWidget *parent)
     ui->setupUi(this);
     m_MainWindow = parent;
     m_ReviseDialogEx = new ReviseDialogEx(parent);
-    InitEnv();
+    Init();
 }
 
 ReviseDialog::~ReviseDialog() {
     delete ui;
-}
-
-void ReviseDialog::InitEnv() {
-    Init();
 }
 
 void ReviseDialog::Init() {

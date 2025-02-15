@@ -19,8 +19,6 @@ public:
 
     ~MethodDialog();
 
-    void InitEnv();
-
     void Init();
 
     void retranslateUi();

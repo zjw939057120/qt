@@ -11,6 +11,8 @@ class FAQDialogEx {
 
 public:
     FAQDialogEx(QWidget *parent);
+
+    void Init();
 };
 
 

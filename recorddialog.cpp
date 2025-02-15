@@ -7,15 +7,11 @@ RecordDialog::RecordDialog(QWidget *parent)
     ui->setupUi(this);
     m_MainWindow = parent;
     m_RecordDialogEx = new RecordDialogEx(parent);
-    InitEnv();
+    Init();
 }
 
 RecordDialog::~RecordDialog() {
     delete ui;
-}
-
-void RecordDialog::InitEnv() {
-    Init();
 }
 
 void RecordDialog::Init() {

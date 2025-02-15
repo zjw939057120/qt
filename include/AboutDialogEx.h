@@ -11,6 +11,9 @@ class AboutDialogEx {
 
 public:
     AboutDialogEx(QWidget *parent);
+
+
+    void Init();
 };
 
 
