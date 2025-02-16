@@ -3,8 +3,6 @@
 
 #include <QDialog>
 
-#include "FAQDialogEx.h"
-
 QT_BEGIN_NAMESPACE
 namespace Ui {
     class FAQDialog;
@@ -30,7 +28,6 @@ private slots:
 private:
     Ui::FAQDialog *ui;
     QWidget *m_MainWindow;
-    FAQDialogEx *m_FaqDialogEx;
 };
 
 #endif // FAQDIALOG_H

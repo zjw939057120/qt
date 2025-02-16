@@ -6,7 +6,7 @@
 #define WIDGET_TOOLKIT_H
 
 #include <QWidget>
-#include "Utils.h"
+#include <QMessageBox>
 
 #define  DATA_PATH "Data"
 #define  SETTING_FILE_PATH "Data/System.ini"
@@ -29,6 +29,8 @@ public:
     static uint8_t ReadFile(const char *path, unsigned char *buff, unsigned long nlen);
 
     static uint8_t ReadConfigFile(const char *Path, float *nValue);
+
+    static short GetMethodAddr(char* name);
 };
 
 

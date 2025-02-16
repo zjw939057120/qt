@@ -3,8 +3,6 @@
 
 #include <QDialog>
 
-#include "ManualDialogEx.h"
-
 QT_BEGIN_NAMESPACE
 namespace Ui {
     class ManualDialog;
@@ -30,7 +28,6 @@ private slots:
 private:
     Ui::ManualDialog *ui;
     QWidget *m_MainWindow;
-    ManualDialogEx *m_ManualDialogEx;
 
 };
 

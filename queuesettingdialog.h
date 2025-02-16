@@ -3,8 +3,6 @@
 
 #include <QDialog>
 
-#include "QueueSettingDialogEx.h"
-
 QT_BEGIN_NAMESPACE
 namespace Ui {
     class QueueSettingDialog;
@@ -32,7 +30,6 @@ private slots:
 private:
     Ui::QueueSettingDialog *ui;
     QWidget *m_MainWindow;
-    QueueSettingDialogEx *m_QueueSettingDialogEx;
 };
 
 #endif // QUEUESETTINGDIALOG_H

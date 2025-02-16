@@ -1,12 +1,12 @@
 #include "manualdialog.h"
 #include "./ui_manualdialog.h"
+#include "mydefine.h"
 #include "Toolkit.h"
 
 ManualDialog::ManualDialog(QWidget *parent)
         : QDialog(parent), ui(new Ui::ManualDialog) {
     ui->setupUi(this);
     m_MainWindow = parent;
-    m_ManualDialogEx = new ManualDialogEx(parent);
     Init();
 }
 

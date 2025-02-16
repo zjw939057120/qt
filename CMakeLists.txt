@@ -13,8 +13,6 @@ find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets LinguistTools)
 find_package(Qt6 6.5 REQUIRED COMPONENTS Charts SerialPort)
 qt_standard_project_setup()
 
-include_directories(include)
-
 qt_add_executable(widget
         WIN32 MACOSX_BUNDLE
         main.cpp
@@ -61,33 +59,10 @@ qt_add_executable(widget
         resources.qrc
         resource.rc
 
-        src/Utils.cpp
-        include/Utils.h
-        src/Toolkit.cpp
-        include/Toolkit.h
-        src/AboutDialogEx.cpp
-        include/AboutDialogEx.h
-        src/FAQDialogEx.cpp
-        include/FAQDialogEx.h
-        src/MainWindowEx.cpp
-        include/MainWindowEx.h
-        src/ManualDialogEx.cpp
-        include/ManualDialogEx.h
-        src/MethodDialogEx.cpp
-        include/MethodDialogEx.h
-        src/QueueDialogEx.cpp
-        include/QueueDialogEx.h
-        src/QueueSettingDialogEx.cpp
-        include/QueueSettingDialogEx.h
-        src/RecordDialogEx.cpp
-        include/RecordDialogEx.h
-        src/ReviseDialogEx.cpp
-        include/ReviseDialogEx.h
-        src/SampleDialogEx.cpp
-        include/SampleDialogEx.h
-
-        src/modbus.cpp
-        src/uart.cpp
+        Toolkit.cpp
+        Toolkit.h
+        modbus.cpp
+        uart.cpp
         )
 
 qt_add_translations(

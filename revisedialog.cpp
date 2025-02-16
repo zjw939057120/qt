@@ -1,12 +1,12 @@
 #include "revisedialog.h"
 #include "./ui_revisedialog.h"
+#include "mydefine.h"
 #include "Toolkit.h"
 
 ReviseDialog::ReviseDialog(QWidget *parent)
         : QDialog(parent), ui(new Ui::ReviseDialog) {
     ui->setupUi(this);
     m_MainWindow = parent;
-    m_ReviseDialogEx = new ReviseDialogEx(parent);
     Init();
 }
 

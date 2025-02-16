@@ -1,13 +1,13 @@
 #include "queuedialog.h"
 #include "./ui_queuedialog.h"
 #include "mainwindow.h"
+#include "mydefine.h"
 #include "Toolkit.h"
 
 QueueDialog::QueueDialog(QWidget *parent)
         : QDialog(parent), ui(new Ui::QueueDialog) {
     ui->setupUi(this);
     m_MainWindow = parent;
-    m_QueueDialogEx = new QueueDialogEx(parent);
     Init();
 }
 

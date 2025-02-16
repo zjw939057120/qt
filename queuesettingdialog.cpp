@@ -1,12 +1,12 @@
 #include "queuesettingdialog.h"
 #include "./ui_queuesettingdialog.h"
+#include "mydefine.h"
 #include "Toolkit.h"
 
 QueueSettingDialog::QueueSettingDialog(QWidget *parent)
         : QDialog(parent), ui(new Ui::QueueSettingDialog) {
     ui->setupUi(this);
     m_MainWindow = parent;
-    m_QueueSettingDialogEx = new QueueSettingDialogEx(parent);
     Init();
 }
 

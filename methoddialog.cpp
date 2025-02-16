@@ -1,12 +1,12 @@
 #include "methoddialog.h"
 #include "./ui_methoddialog.h"
+#include "mydefine.h"
 #include "Toolkit.h"
 
 MethodDialog::MethodDialog(QWidget *parent)
         : QDialog(parent), ui(new Ui::MethodDialog) {
     ui->setupUi(this);
     m_MainWindow = parent;
-    m_MethodDialogEx = new MethodDialogEx(parent);
     Init();
 }
 

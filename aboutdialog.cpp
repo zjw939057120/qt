@@ -1,13 +1,13 @@
 #include <QTranslator>
 #include "aboutdialog.h"
 #include "./ui_aboutdialog.h"
+#include "mydefine.h"
 #include "Toolkit.h"
 
 AboutDialog::AboutDialog(QWidget *parent)
         : QDialog(parent), ui(new Ui::AboutDialog) {
     ui->setupUi(this);
     m_MainWindow = parent;
-    m_AboutDialogEx = new AboutDialogEx(parent);
     Init();
 }
 

@@ -3,8 +3,6 @@
 
 #include <QDialog>
 
-#include "RecordDialogEx.h"
-
 QT_BEGIN_NAMESPACE
 namespace Ui {
     class RecordDialog;
@@ -30,7 +28,6 @@ private slots:
 private:
     Ui::RecordDialog *ui;
     QWidget *m_MainWindow;
-    RecordDialogEx *m_RecordDialogEx;
 };
 
 #endif // RECORDDIALOG_H

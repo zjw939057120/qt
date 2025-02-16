@@ -3,8 +3,6 @@
 
 #include <QDialog>
 
-#include "SampleDialogEx.h"
-
 QT_BEGIN_NAMESPACE
 namespace Ui {
     class SampleDialog;
@@ -30,7 +28,6 @@ private slots:
 private:
     Ui::SampleDialog *ui;
     QWidget *m_MainWindow;
-    SampleDialogEx *m_SampleDialogEx;
 };
 
 #endif // SAMPLEDIALOG_H

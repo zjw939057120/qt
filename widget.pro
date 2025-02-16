@@ -33,35 +33,13 @@ HEADERS += \
     revisedialog.h \
     sampledialog.h \
 
-INCLUDEPATH += include
-
 SOURCES += \
-        src/Utils.cpp \
-        src/Toolkit.cpp \
-        src/AboutDialogEx.cpp \
-        src/FAQDialogEx.cpp \
-        src/MainWindowEx.cpp \
-        src/ManualDialogEx.cpp \
-        src/MethodDialogEx.cpp \
-        src/QueueDialogEx.cpp \
-        src/QueueSettingDialogEx.cpp \
-        src/RecordDialogEx.cpp \
-        src/ReviseDialogEx.cpp \
-        src/SampleDialogEx.cpp \
+        Toolkit.cpp \
+        modbus.cpp \
+        uart.cpp \
 
 HEADERS += \
-        include/Utils.h
-        include/Toolkit.h
-        include/AboutDialogEx.h
-        include/FAQDialogEx.h
-        include/MainWindowEx.h
-        include/ManualDialogEx.h
-        include/MethodDialogEx.h
-        include/QueueDialogEx.h
-        include/QueueSettingDialogEx.h
-        include/RecordDialogEx.h
-        include/ReviseDialogEx.h
-        include/SampleDialogEx.h
+        Toolkit.h
 
 FORMS += \
     mainwindow.ui \

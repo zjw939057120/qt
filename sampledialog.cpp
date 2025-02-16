@@ -1,12 +1,12 @@
 #include "sampledialog.h"
 #include "./ui_sampledialog.h"
+#include "mydefine.h"
 #include "Toolkit.h"
 
 SampleDialog::SampleDialog(QWidget *parent)
         : QDialog(parent), ui(new Ui::SampleDialog) {
     ui->setupUi(this);
     m_MainWindow = parent;
-    m_SampleDialogEx = new SampleDialogEx(parent);
     Init();
 }
 

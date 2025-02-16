@@ -1,4 +1,5 @@
 #include "mydefine.h"
+#include "Toolkit.h"
 
 //===================================================================
 //常用数据转换
@@ -397,7 +398,7 @@ void ModbusGetRegMap(unsigned short QueueNumber,unsigned short ItemNumber)
 	unsigned short idex = 0;
 	int nMethod = 0;
 
-	nMethod = GetMethodAddr(QueueDlg[QueueNumber].Item[ItemNumber].Method);
+	nMethod = Toolkit::GetMethodAddr(QueueDlg[QueueNumber].Item[ItemNumber].Method);
 	if (nMethod == -1)	return;
 
 	//AJ进样器

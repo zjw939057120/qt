@@ -2,8 +2,8 @@
 // Created by zjw93 on 2025/2/11.
 //
 
-#include "Toolkit.h"
 #include "mydefine.h"
+#include "Toolkit.h"
 #include <QDebug>
 #include <QDir>
 #include <QFile>
@@ -100,4 +100,25 @@ uint8_t Toolkit::ReadConfigFile(const char *Path, float *nValue) {
     }
 
     return 1;
+}
+
+//=============================================
+//	通过名称找到对应的设备ID号
+//=============================================
+short Toolkit::GetMethodAddr(char* name)
+{
+    int i;
+    std::string temp1, temp2;
+
+    temp1 = name;
+    for (i = 0; i < METHOD_TOTAL; i++)
+    {
+        temp2 = MethodDlg[i].Name;
+        if (MethodDlg[i].Valid)
+        {
+            if (temp1 == temp2)	return i;
+        }
+    }
+
+    return -1;
 }

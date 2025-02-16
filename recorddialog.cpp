@@ -1,12 +1,12 @@
 #include "recorddialog.h"
 #include "./ui_recorddialog.h"
+#include "mydefine.h"
 #include "Toolkit.h"
 
 RecordDialog::RecordDialog(QWidget *parent)
         : QDialog(parent), ui(new Ui::RecordDialog) {
     ui->setupUi(this);
     m_MainWindow = parent;
-    m_RecordDialogEx = new RecordDialogEx(parent);
     Init();
 }
 

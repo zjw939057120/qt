@@ -3,8 +3,6 @@
 
 #include <QDialog>
 
-#include "ReviseDialogEx.h"
-
 QT_BEGIN_NAMESPACE
 namespace Ui {
     class ReviseDialog;
@@ -36,7 +34,6 @@ private slots:
 private:
     Ui::ReviseDialog *ui;
     QWidget *m_MainWindow;
-    ReviseDialogEx *m_ReviseDialogEx;
 };
 
 #endif // REVISEDIALOG_H

@@ -2,7 +2,6 @@
 #define ABOUTDIALOG_H
 
 #include <QDialog>
-#include "AboutDialogEx.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -29,7 +28,6 @@ private slots:
 private:
     Ui::AboutDialog *ui;
     QWidget *m_MainWindow;
-    AboutDialogEx *m_AboutDialogEx;
 };
 
 #endif // ABOUTDIALOG_H

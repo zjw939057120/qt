@@ -3,8 +3,6 @@
 
 #include <QDialog>
 
-#include "MethodDialogEx.h"
-
 QT_BEGIN_NAMESPACE
 namespace Ui {
     class MethodDialog;
@@ -32,7 +30,6 @@ private slots:
 private:
     Ui::MethodDialog *ui;
     QWidget *m_MainWindow;
-    MethodDialogEx *m_MethodDialogEx;
 };
 
 #endif // METHODDIALOG_H
