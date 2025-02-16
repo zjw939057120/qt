@@ -1,5 +1,5 @@
 #include "faqdialog.h"
-#include "./ui_faqdialog.h"
+#include "ui_faqdialog.h"
 #include "mydefine.h"
 #include "Toolkit.h"
 

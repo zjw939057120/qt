@@ -31,7 +31,7 @@ private slots:
 
     void on_pushButton_SingleStep_clicked();
 
-private:
+public:
     Ui::ReviseDialog *ui;
     QWidget *m_MainWindow;
 };

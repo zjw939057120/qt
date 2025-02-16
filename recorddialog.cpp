@@ -1,5 +1,5 @@
 #include "recorddialog.h"
-#include "./ui_recorddialog.h"
+#include "ui_recorddialog.h"
 #include "mydefine.h"
 #include "Toolkit.h"
 

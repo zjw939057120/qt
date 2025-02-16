@@ -27,7 +27,7 @@ private slots:
 
     void on_pushButton_Stage_clicked();
 
-private:
+public:
     Ui::QueueSettingDialog *ui;
     QWidget *m_MainWindow;
 };

@@ -1,5 +1,5 @@
 #include "revisedialog.h"
-#include "./ui_revisedialog.h"
+#include "ui_revisedialog.h"
 #include "mydefine.h"
 #include "Toolkit.h"
 

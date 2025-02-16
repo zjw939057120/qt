@@ -1,5 +1,5 @@
 #include "methoddialog.h"
-#include "./ui_methoddialog.h"
+#include "ui_methoddialog.h"
 #include "mydefine.h"
 #include "Toolkit.h"
 

@@ -1,6 +1,6 @@
 #include <QTranslator>
 #include "aboutdialog.h"
-#include "./ui_aboutdialog.h"
+#include "ui_aboutdialog.h"
 #include "mydefine.h"
 #include "Toolkit.h"
 

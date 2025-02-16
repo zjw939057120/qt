@@ -31,7 +31,7 @@ private slots:
 
     void on_pushButton_StopAnalyze_clicked();
 
-private:
+public:
     Ui::QueueDialog *ui;
     QWidget *m_MainWindow;
 };

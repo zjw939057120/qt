@@ -25,7 +25,7 @@ private slots:
 
     void on_pushButton_Close_clicked();
 
-private:
+public:
     Ui::ManualDialog *ui;
     QWidget *m_MainWindow;
 

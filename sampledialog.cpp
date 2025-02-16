@@ -1,5 +1,5 @@
 #include "sampledialog.h"
-#include "./ui_sampledialog.h"
+#include "ui_sampledialog.h"
 #include "mydefine.h"
 #include "Toolkit.h"
 

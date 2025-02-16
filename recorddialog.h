@@ -25,7 +25,7 @@ private slots:
 
     void on_pushButton_Close_clicked();
 
-private:
+public:
     Ui::RecordDialog *ui;
     QWidget *m_MainWindow;
 };

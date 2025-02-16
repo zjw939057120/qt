@@ -1,5 +1,5 @@
 #include "manualdialog.h"
-#include "./ui_manualdialog.h"
+#include "ui_manualdialog.h"
 #include "mydefine.h"
 #include "Toolkit.h"
 

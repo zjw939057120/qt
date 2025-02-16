@@ -44,8 +44,8 @@ void WriteLogFile(char *nText) {
 
 void Toolkit::WriteLogFile(const char *message) {
     // 创建日志文件（如果文件不存在则会创建）
-    QString qString = QString(LOG_FILE_PATH).arg(QDateTime::currentDateTime().toString("yyyy-MM-dd"));
-    QFile file(qString);
+    QString name = QString(LOG_FILE_PATH).arg(QDateTime::currentDateTime().toString("yyyy-MM-dd"));
+    QFile file(name);
 
     // 以追加模式打开文件
     if (file.open(QIODevice::Append | QIODevice::Text)) {
@@ -105,18 +105,15 @@ uint8_t Toolkit::ReadConfigFile(const char *Path, float *nValue) {
 //=============================================
 //	通过名称找到对应的设备ID号
 //=============================================
-short Toolkit::GetMethodAddr(char* name)
-{
+short Toolkit::GetMethodAddr(char *name) {
     int i;
     std::string temp1, temp2;
 
     temp1 = name;
-    for (i = 0; i < METHOD_TOTAL; i++)
-    {
+    for (i = 0; i < METHOD_TOTAL; i++) {
         temp2 = MethodDlg[i].Name;
-        if (MethodDlg[i].Valid)
-        {
-            if (temp1 == temp2)	return i;
+        if (MethodDlg[i].Valid) {
+            if (temp1 == temp2) return i;
         }
     }
 

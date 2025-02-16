@@ -1,5 +1,5 @@
 #include "queuesettingdialog.h"
-#include "./ui_queuesettingdialog.h"
+#include "ui_queuesettingdialog.h"
 #include "mydefine.h"
 #include "Toolkit.h"
 

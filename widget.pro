@@ -8,6 +8,8 @@ CONFIG += c++17
 # In order to do so, uncomment the following line.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
+DEFINES += _DEBUG_ENV
+
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
@@ -20,6 +22,7 @@ SOURCES += \
     recorddialog.cpp \
     revisedialog.cpp \
     sampledialog.cpp \
+    debugdialog.cpp \
 
 HEADERS += \
     mainwindow.h \
@@ -32,6 +35,7 @@ HEADERS += \
     recorddialog.h \
     revisedialog.h \
     sampledialog.h \
+    debugdialog.h \
 
 SOURCES += \
         Toolkit.cpp \
@@ -52,6 +56,7 @@ FORMS += \
     recorddialog.ui \
     revisedialog.ui \
     sampledialog.ui \
+    debugdialog.ui \
 
 RESOURCES += resources.qrc
 RC_FILE = resource.rc

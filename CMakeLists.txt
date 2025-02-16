@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.19)
 project(widget LANGUAGES CXX)
 
+add_definitions(-D_DEBUG_ENV)
 include_directories(.)
 link_directories(.)
 
@@ -55,6 +56,10 @@ qt_add_executable(widget
         sampledialog.cpp
         sampledialog.h
         sampledialog.ui
+
+        debugdialog.cpp
+        debugdialog.h
+        debugdialog.ui
 
         resources.qrc
         resource.rc
