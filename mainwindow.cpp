@@ -113,16 +113,21 @@ void MainWindow::Init() {
     m_DebugDialog->show();
 #endif
 
-    Toolkit::CreatePath(DATA_PATH);
+    Toolkit::CreatePath(CONFIG_PATH);
+    Toolkit::CreatePath(QUEUE_PATH);
+    Toolkit::CreatePath(METHOD_PATH);
     Toolkit::CreatePath(LOG_PATH);
+    Toolkit::CreatePath(REPORT_PATH);
+    Toolkit::CreatePath(WAVE_PATH);
+
     m_DebugDialog->WriteLogFile("打开软件");
     uint8_t nFlag;
-    nFlag = Toolkit::ReadFile(QUEUE_FILE_PATH, (unsigned char *) &QueueDlg, sizeof(STRQUEUE) * QUEUE_TOTAL);
+    nFlag = Toolkit::ReadFile(QUEUE_PATH_DATA, (unsigned char *) &QueueDlg, sizeof(STRQUEUE) * QUEUE_TOTAL);
     if (!nFlag) m_DebugDialog->WriteLogFile("没有找到队列文件");        //添加log日志
-    nFlag = Toolkit::ReadFile(METHOD_FILE_PATH, (unsigned char *) &MethodDlg,
+    nFlag = Toolkit::ReadFile(METHOD_PATH_DATA, (unsigned char *) &MethodDlg,
                               sizeof(STRMETHOD) * METHOD_TOTAL);
     if (!nFlag) m_DebugDialog->WriteLogFile("没有找到方法文件");        //添加log日志
-    nFlag = Toolkit::ReadConfigFile(SETTING_FILE_PATH, VariaDlg.SystemPara);
+    nFlag = Toolkit::ReadConfigFile(CONFIG_PATH_DATA, VariaDlg.SystemPara);
     if (!nFlag) {
         m_DebugDialog->WriteLogFile("没有找到系统配置文件");        //添加log日志
         QMessageBox::warning(nullptr, "错误", "读取配置文件失败,请检查文件");

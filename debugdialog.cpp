@@ -33,7 +33,7 @@ void DebugDialog::WriteLogFile(const char *message) {
 #endif
 
     // 创建日志文件（如果文件不存在则会创建）
-    QString name = QString(LOG_FILE_PATH).arg(QDateTime::currentDateTime().toString("yyyy-MM-dd"));
+    QString name = QString(LOG_PATH_DATA).arg(QDateTime::currentDateTime().toString("yyyy-MM-dd"));
     QFile file(name);
     // 以追加模式打开文件
     if (file.open(QIODevice::Append | QIODevice::Text)) {

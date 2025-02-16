@@ -23,7 +23,7 @@ void Toolkit::MinMaxButtonsHint(QWidget *qWidget) {
 
 void WriteLogFile(char *nText) {
     // 创建日志文件（如果文件不存在则会创建）
-    QString qString = QString(LOG_FILE_PATH).arg(QDateTime::currentDateTime().toString("yyyy-MM-dd"));
+    QString qString = QString(LOG_PATH_DATA).arg(QDateTime::currentDateTime().toString("yyyy-MM-dd"));
     QFile file(qString);
 
     // 以追加模式打开文件
@@ -44,7 +44,7 @@ void WriteLogFile(char *nText) {
 
 void Toolkit::WriteLogFile(const char *message) {
     // 创建日志文件（如果文件不存在则会创建）
-    QString name = QString(LOG_FILE_PATH).arg(QDateTime::currentDateTime().toString("yyyy-MM-dd"));
+    QString name = QString(LOG_PATH_DATA).arg(QDateTime::currentDateTime().toString("yyyy-MM-dd"));
     QFile file(name);
 
     // 以追加模式打开文件

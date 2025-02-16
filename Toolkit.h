@@ -8,12 +8,16 @@
 #include <QWidget>
 #include <QMessageBox>
 
-#define  DATA_PATH "Data"
-#define  SETTING_FILE_PATH "Data/System.ini"
-#define  METHOD_FILE_PATH  "Data/Method.bin"
-#define  QUEUE_FILE_PATH "Data/Queue.bin"
+#define  CONFIG_PATH "Config"
+#define  CONFIG_PATH_DATA "Config/System.ini"
+#define  QUEUE_PATH "Queue"
+#define  QUEUE_PATH_DATA "Queue/QueueFile.bin"
+#define  METHOD_PATH "Method"
+#define  METHOD_PATH_DATA  "Method/MethodFile.bin"
 #define  LOG_PATH "Log"
-#define  LOG_FILE_PATH "Log/Log-%1.txt"
+#define  LOG_PATH_DATA "Log/Log-%1.txt"
+#define  REPORT_PATH "Report"
+#define  WAVE_PATH "Wave"
 
 class Toolkit {
 
@@ -30,7 +34,7 @@ public:
 
     static uint8_t ReadConfigFile(const char *Path, float *nValue);
 
-    static short GetMethodAddr(char* name);
+    static short GetMethodAddr(char *name);
 };
 
 

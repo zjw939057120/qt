@@ -15,6 +15,14 @@
     </message>
 </context>
 <context>
+    <name>DebugDialog</name>
+    <message>
+        <location filename="debugdialog.ui" line="14"/>
+        <source>DebugDialog</source>
+        <translation>调试</translation>
+    </message>
+</context>
+<context>
     <name>FAQDialog</name>
     <message>
         <location filename="faqdialog.ui" line="14"/>
