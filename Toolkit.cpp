@@ -96,9 +96,7 @@ uint8_t Toolkit::ReadConfigFile(const char *Path, float *nValue) {
         // 读取各个配置项
         QString key = QString("para%1").arg(i);
         nValue[i] = settings.value(key, 0).toFloat();
-        Toolkit::WriteLogFile(settings.value(key, 0).toString().toStdString().data());
     }
-
     return 1;
 }
 
@@ -118,4 +116,31 @@ short Toolkit::GetMethodAddr(char *name) {
     }
 
     return -1;
+}
+
+
+QSerialPort *m_SerialPort = nullptr;
+
+unsigned char Toolkit::CreateUart(unsigned char nPort, int nBaut) {
+    m_SerialPort = new QSerialPort(nullptr);
+    QString prefix("COM");
+    m_SerialPort->setPortName(prefix.append(std::to_string(nPort)));  // 设置串口名
+    m_SerialPort->setBaudRate(nBaut);  // 设置波特率
+    m_SerialPort->setDataBits(QSerialPort::Data8);     // 设置数据位
+    m_SerialPort->setParity(QSerialPort::NoParity);    // 设置校验位
+    m_SerialPort->setStopBits(QSerialPort::OneStop);   // 设置停止位
+    m_SerialPort->setFlowControl(QSerialPort::NoFlowControl);  // 设置流控
+    if (m_SerialPort->open(QIODevice::ReadWrite)) {
+        return nPort;
+    } else {
+        return 0;
+    }
+}
+
+void Toolkit::UartSendBuff(unsigned char *buff, unsigned short nlen) {
+
+}
+
+unsigned short Toolkit::UartRecvBuff(unsigned char *buff) {
+    return 0;
 }

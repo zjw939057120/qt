@@ -133,8 +133,14 @@ void MainWindow::Init() {
         QMessageBox::warning(nullptr, "错误", "读取配置文件失败,请检查文件");
         exit(0);
     }
+#ifdef _DEBUG_ENV
+    for (int i = 0; i < SYSTEM_PARA_TOTAL; ++i) {
+        m_DebugDialog->WriteLogFile(std::to_string(VariaDlg.SystemPara[i]).data());
+    }
+#endif
+
     ModbusGetRegMap(0, 0);
 
-    VariaDlg.UartPort = CreateUart((unsigned char) VariaDlg.SystemPara[0], VariaDlg.SystemPara[1]);
+    VariaDlg.UartPort = Toolkit::CreateUart((unsigned char) VariaDlg.SystemPara[0], VariaDlg.SystemPara[1]);
     if (!VariaDlg.UartPort) m_DebugDialog->WriteLogFile("打开指定串口失败");        //添加log日志
 }

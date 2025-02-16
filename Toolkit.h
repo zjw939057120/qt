@@ -7,6 +7,8 @@
 
 #include <QWidget>
 #include <QMessageBox>
+#include <QSerialPort>
+#include <QSerialPortInfo>
 
 #define  CONFIG_PATH "Config"
 #define  CONFIG_PATH_DATA "Config/System.ini"
@@ -35,7 +37,13 @@ public:
     static uint8_t ReadConfigFile(const char *Path, float *nValue);
 
     static short GetMethodAddr(char *name);
-};
 
+    static unsigned char CreateUart(unsigned char nPort, int nBaut);
+
+    static void UartSendBuff(unsigned char *buff, unsigned short nlen);
+
+    static unsigned short UartRecvBuff(unsigned char *buff);
+
+};
 
 #endif //WIDGET_TOOLKIT_H

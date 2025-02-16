@@ -85,7 +85,10 @@ target_link_libraries(widget
 target_link_libraries(widget
         PRIVATE
         ws2_32
+        Qt::Charts
+        Qt::SerialPort
         )
+
 include(GNUInstallDirs)
 
 install(TARGETS widget
