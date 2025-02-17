@@ -3,6 +3,7 @@
 #include "mainwindow.h"
 #include "mydefine.h"
 #include "Toolkit.h"
+#include "mainwindow.h"
 
 QueueDialog::QueueDialog(QWidget *parent)
         : QDialog(parent), ui(new Ui::QueueDialog) {
@@ -16,8 +17,8 @@ QueueDialog::~QueueDialog() {
 }
 
 void QueueDialog::Init() {
-    Toolkit::LineEditBorder(this);
-    Toolkit::MinMaxButtonsHint(this);
+    ((MainWindow *) m_MainWindow)->m_Toolkit->LineEditBorder(this);
+    ((MainWindow *) m_MainWindow)->m_Toolkit->MinMaxButtonsHint(this);
 }
 
 void QueueDialog::retranslateUi() {
@@ -25,7 +26,7 @@ void QueueDialog::retranslateUi() {
 }
 
 void QueueDialog::on_pushButton_AddData_clicked() {
-    ((MainWindow *) m_MainWindow)->m_QueueSettingDialog->show();
+    (((MainWindow *) m_MainWindow))->m_QueueSettingDialog->show();
 }
 
 

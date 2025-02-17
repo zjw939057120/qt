@@ -2,6 +2,7 @@
 #include "ui_methoddialog.h"
 #include "mydefine.h"
 #include "Toolkit.h"
+#include "mainwindow.h"
 
 MethodDialog::MethodDialog(QWidget *parent)
         : QDialog(parent), ui(new Ui::MethodDialog) {
@@ -15,8 +16,8 @@ MethodDialog::~MethodDialog() {
 }
 
 void MethodDialog::Init() {
-    Toolkit::LineEditBorder(this);
-    Toolkit::MinMaxButtonsHint(this);
+    ((MainWindow *) m_MainWindow)->m_Toolkit->LineEditBorder(this);
+    ((MainWindow *) m_MainWindow)->m_Toolkit->MinMaxButtonsHint(this);
 }
 
 void MethodDialog::retranslateUi() {

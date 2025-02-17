@@ -2,6 +2,7 @@
 #include "ui_queuesettingdialog.h"
 #include "mydefine.h"
 #include "Toolkit.h"
+#include "mainwindow.h"
 
 QueueSettingDialog::QueueSettingDialog(QWidget *parent)
         : QDialog(parent), ui(new Ui::QueueSettingDialog) {
@@ -16,8 +17,8 @@ QueueSettingDialog::~QueueSettingDialog() {
 
 void QueueSettingDialog::Init() {
     this->setModal(true);
-    Toolkit::LineEditBorder(this);
-    Toolkit::MinMaxButtonsHint(this);
+    ((MainWindow *) m_MainWindow)->m_Toolkit->LineEditBorder(this);
+    ((MainWindow *) m_MainWindow)->m_Toolkit->MinMaxButtonsHint(this);
 }
 
 void QueueSettingDialog::retranslateUi() {

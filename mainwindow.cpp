@@ -5,6 +5,7 @@
 #include <QApplication>
 #include "mydefine.h"
 #include "Toolkit.h"
+#include "mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
         : QMainWindow(parent), ui(new Ui::MainWindow) {
@@ -73,6 +74,10 @@ void MainWindow::on_actionAbout_triggered() {
     m_AboutDialog->show();
 }
 
+void MainWindow::on_actionDebug_triggered() {
+    m_DebugDialog->show();
+}
+
 void MainWindow::retranslateUi(const QString &lang) {
     QTranslator translator;
     if (translator.load(":/i18n/widget_" + lang)) {
@@ -92,6 +97,7 @@ void MainWindow::retranslateUi(const QString &lang) {
 }
 
 void MainWindow::Init() {
+    m_Toolkit = new Toolkit(this);
     m_AboutDialog = new AboutDialog(this);
     m_FAQDialog = new FAQDialog(this);
     m_ManualDialog = new ManualDialog(this);
@@ -104,30 +110,26 @@ void MainWindow::Init() {
     m_SampleDialog = new SampleDialog(this);
     m_DebugDialog = new DebugDialog(this);
 
-    Toolkit::LineEditBorder(this);
+    m_Toolkit->LineEditBorder(this);
 #ifdef __linux__
     Utils::windowMinMaxButtonsHint(this);
 #endif
 
-#ifdef _DEBUG_ENV
-    m_DebugDialog->show();
-#endif
-
-    Toolkit::CreatePath(CONFIG_PATH);
-    Toolkit::CreatePath(QUEUE_PATH);
-    Toolkit::CreatePath(METHOD_PATH);
-    Toolkit::CreatePath(LOG_PATH);
-    Toolkit::CreatePath(REPORT_PATH);
-    Toolkit::CreatePath(WAVE_PATH);
+    m_Toolkit->CreatePath(CONFIG_PATH);
+    m_Toolkit->CreatePath(QUEUE_PATH);
+    m_Toolkit->CreatePath(METHOD_PATH);
+    m_Toolkit->CreatePath(LOG_PATH);
+    m_Toolkit->CreatePath(REPORT_PATH);
+    m_Toolkit->CreatePath(WAVE_PATH);
 
     m_DebugDialog->WriteLogFile("打开软件");
     uint8_t nFlag;
-    nFlag = Toolkit::ReadFile(QUEUE_PATH_DATA, (unsigned char *) &QueueDlg, sizeof(STRQUEUE) * QUEUE_TOTAL);
+    nFlag = m_Toolkit->ReadFile(QUEUE_PATH_DATA, (unsigned char *) &QueueDlg, sizeof(STRQUEUE) * QUEUE_TOTAL);
     if (!nFlag) m_DebugDialog->WriteLogFile("没有找到队列文件");        //添加log日志
-    nFlag = Toolkit::ReadFile(METHOD_PATH_DATA, (unsigned char *) &MethodDlg,
-                              sizeof(STRMETHOD) * METHOD_TOTAL);
+    nFlag = m_Toolkit->ReadFile(METHOD_PATH_DATA, (unsigned char *) &MethodDlg,
+                                sizeof(STRMETHOD) * METHOD_TOTAL);
     if (!nFlag) m_DebugDialog->WriteLogFile("没有找到方法文件");        //添加log日志
-    nFlag = Toolkit::ReadConfigFile(CONFIG_PATH_DATA, VariaDlg.SystemPara);
+    nFlag = m_Toolkit->ReadConfigFile(CONFIG_PATH_DATA, VariaDlg.SystemPara);
     if (!nFlag) {
         m_DebugDialog->WriteLogFile("没有找到系统配置文件");        //添加log日志
         QMessageBox::warning(nullptr, "错误", "读取配置文件失败,请检查文件");
@@ -141,6 +143,6 @@ void MainWindow::Init() {
 
     ModbusGetRegMap(0, 0);
 
-    VariaDlg.UartPort = Toolkit::CreateUart((unsigned char) VariaDlg.SystemPara[0], VariaDlg.SystemPara[1]);
+    VariaDlg.UartPort = m_Toolkit->CreateUart((unsigned char) VariaDlg.SystemPara[0], VariaDlg.SystemPara[1]);
     if (!VariaDlg.UartPort) m_DebugDialog->WriteLogFile("打开指定串口失败");        //添加log日志
 }

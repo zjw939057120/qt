@@ -4,12 +4,18 @@
 
 #include "mydefine.h"
 #include "Toolkit.h"
+#include "mainwindow.h"
 #include <QDebug>
 #include <QDir>
 #include <QFile>
 #include <QTextStream>
 #include <QDateTime>
 #include <QSettings>
+
+
+Toolkit::Toolkit(QWidget *parent) {
+    m_SerialPort = new QSerialPort(parent);
+}
 
 void Toolkit::LineEditBorder(QWidget *qWidget) {
     qWidget->setStyleSheet("QLineEdit { border: none; }");
@@ -20,28 +26,6 @@ void Toolkit::MinMaxButtonsHint(QWidget *qWidget) {
 
 }
 
-
-void WriteLogFile(char *nText) {
-    // 创建日志文件（如果文件不存在则会创建）
-    QString qString = QString(LOG_PATH_DATA).arg(QDateTime::currentDateTime().toString("yyyy-MM-dd"));
-    QFile file(qString);
-
-    // 以追加模式打开文件
-    if (file.open(QIODevice::Append | QIODevice::Text)) {
-        QTextStream out(&file);
-
-        // 获取当前时间戳
-        QString currentTime = QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss ");
-
-        // 写入日志，包含时间戳
-        out << currentTime << nText << "\n";
-
-        file.close();  // 关闭文件
-    } else {
-        qDebug() << "Unable to open log file for writing!";
-    }
-}
-
 void Toolkit::WriteLogFile(const char *message) {
     // 创建日志文件（如果文件不存在则会创建）
     QString name = QString(LOG_PATH_DATA).arg(QDateTime::currentDateTime().toString("yyyy-MM-dd"));
@@ -50,13 +34,8 @@ void Toolkit::WriteLogFile(const char *message) {
     // 以追加模式打开文件
     if (file.open(QIODevice::Append | QIODevice::Text)) {
         QTextStream out(&file);
-
-        // 获取当前时间戳
-        QString currentTime = QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss ");
-
         // 写入日志，包含时间戳
-        out << currentTime << message << "\n";
-
+        out << message << "\n";
         file.close();  // 关闭文件
     } else {
         qDebug() << "Unable to open log file for writing!";
@@ -118,11 +97,7 @@ short Toolkit::GetMethodAddr(char *name) {
     return -1;
 }
 
-
-QSerialPort *m_SerialPort = nullptr;
-
 unsigned char Toolkit::CreateUart(unsigned char nPort, int nBaut) {
-    m_SerialPort = new QSerialPort(nullptr);
     QString prefix("COM");
     m_SerialPort->setPortName(prefix.append(std::to_string(nPort)));  // 设置串口名
     m_SerialPort->setBaudRate(nBaut);  // 设置波特率

@@ -2,6 +2,7 @@
 #include "ui_revisedialog.h"
 #include "mydefine.h"
 #include "Toolkit.h"
+#include "mainwindow.h"
 
 ReviseDialog::ReviseDialog(QWidget *parent)
         : QDialog(parent), ui(new Ui::ReviseDialog) {
@@ -15,8 +16,8 @@ ReviseDialog::~ReviseDialog() {
 }
 
 void ReviseDialog::Init() {
-    Toolkit::LineEditBorder(this);
-    Toolkit::MinMaxButtonsHint(this);
+    ((MainWindow *) m_MainWindow)->m_Toolkit->LineEditBorder(this);
+    ((MainWindow *) m_MainWindow)->m_Toolkit->MinMaxButtonsHint(this);
 }
 
 void ReviseDialog::retranslateUi() {

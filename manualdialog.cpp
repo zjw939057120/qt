@@ -2,6 +2,7 @@
 #include "ui_manualdialog.h"
 #include "mydefine.h"
 #include "Toolkit.h"
+#include "mainwindow.h"
 
 ManualDialog::ManualDialog(QWidget *parent)
         : QDialog(parent), ui(new Ui::ManualDialog) {
@@ -19,8 +20,8 @@ void ManualDialog::retranslateUi() {
 }
 
 void ManualDialog::Init() {
-    Toolkit::LineEditBorder(this);
-    Toolkit::MinMaxButtonsHint(this);
+    ((MainWindow *) m_MainWindow)->m_Toolkit->LineEditBorder(this);
+    ((MainWindow *) m_MainWindow)->m_Toolkit->MinMaxButtonsHint(this);
 }
 
 void ManualDialog::on_pushButton_Close_clicked() {

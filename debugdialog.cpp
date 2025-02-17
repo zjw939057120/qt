@@ -2,6 +2,7 @@
 #include "ui_debugdialog.h"
 #include "mydefine.h"
 #include "Toolkit.h"
+#include "mainwindow.h"
 #include <QFile>
 #include <QTextStream>
 #include <QDateTime>
@@ -18,8 +19,8 @@ DebugDialog::~DebugDialog() {
 }
 
 void DebugDialog::Init() {
-    Toolkit::LineEditBorder(this);
-    Toolkit::MinMaxButtonsHint(this);
+    ((MainWindow *) m_MainWindow)->m_Toolkit->LineEditBorder(this);
+    ((MainWindow *) m_MainWindow)->m_Toolkit->MinMaxButtonsHint(this);
 }
 
 void DebugDialog::retranslateUi() {
@@ -31,15 +32,7 @@ void DebugDialog::WriteLogFile(const char *message) {
 #ifdef _DEBUG_ENV
     ui->listWidget->addItem(msg);
 #endif
+    ((MainWindow *) m_MainWindow)->m_Toolkit->LineEditBorder(this);
 
-    // 创建日志文件（如果文件不存在则会创建）
-    QString name = QString(LOG_PATH_DATA).arg(QDateTime::currentDateTime().toString("yyyy-MM-dd"));
-    QFile file(name);
-    // 以追加模式打开文件
-    if (file.open(QIODevice::Append | QIODevice::Text)) {
-        QTextStream out(&file);
-        // 写入日志，包含时间戳
-        out << msg << "\n";
-        file.close();  // 关闭文件
-    }
+    Toolkit::WriteLogFile(msg.toStdString().data());
 }

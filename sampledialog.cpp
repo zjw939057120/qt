@@ -2,6 +2,7 @@
 #include "ui_sampledialog.h"
 #include "mydefine.h"
 #include "Toolkit.h"
+#include "mainwindow.h"
 
 SampleDialog::SampleDialog(QWidget *parent)
         : QDialog(parent), ui(new Ui::SampleDialog) {
@@ -15,8 +16,8 @@ SampleDialog::~SampleDialog() {
 }
 
 void SampleDialog::Init() {
-    Toolkit::LineEditBorder(this);
-    Toolkit::MinMaxButtonsHint(this);
+    ((MainWindow *) m_MainWindow)->m_Toolkit->LineEditBorder(this);
+    ((MainWindow *) m_MainWindow)->m_Toolkit->MinMaxButtonsHint(this);
 }
 
 void SampleDialog::retranslateUi() {

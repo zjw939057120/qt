@@ -24,26 +24,30 @@
 class Toolkit {
 
 public:
-    static void LineEditBorder(QWidget *qWidget);
+    Toolkit(QWidget *parent = nullptr);
 
-    static void MinMaxButtonsHint(QWidget *qWidget);
+    void LineEditBorder(QWidget *qWidget);
+
+    void MinMaxButtonsHint(QWidget *qWidget);
 
     static void WriteLogFile(const char *message);
 
-    static void CreatePath(const char *path);
+    void CreatePath(const char *path);
 
-    static uint8_t ReadFile(const char *path, unsigned char *buff, unsigned long nlen);
+    uint8_t ReadFile(const char *path, unsigned char *buff, unsigned long nlen);
 
-    static uint8_t ReadConfigFile(const char *Path, float *nValue);
+    uint8_t ReadConfigFile(const char *Path, float *nValue);
 
     static short GetMethodAddr(char *name);
 
-    static unsigned char CreateUart(unsigned char nPort, int nBaut);
+    unsigned char CreateUart(unsigned char nPort, int nBaut);
 
-    static void UartSendBuff(unsigned char *buff, unsigned short nlen);
+    void UartSendBuff(unsigned char *buff, unsigned short nlen);
 
-    static unsigned short UartRecvBuff(unsigned char *buff);
+    unsigned short UartRecvBuff(unsigned char *buff);
 
+public:
+    QSerialPort *m_SerialPort = nullptr;
 };
 
 #endif //WIDGET_TOOLKIT_H

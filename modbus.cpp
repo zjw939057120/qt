@@ -1,5 +1,6 @@
 #include "mydefine.h"
 #include "Toolkit.h"
+#include "mainwindow.h"
 
 //===================================================================
 //常用数据转换

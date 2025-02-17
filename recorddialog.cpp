@@ -2,6 +2,7 @@
 #include "ui_recorddialog.h"
 #include "mydefine.h"
 #include "Toolkit.h"
+#include "mainwindow.h"
 
 RecordDialog::RecordDialog(QWidget *parent)
         : QDialog(parent), ui(new Ui::RecordDialog) {
@@ -15,8 +16,8 @@ RecordDialog::~RecordDialog() {
 }
 
 void RecordDialog::Init() {
-    Toolkit::LineEditBorder(this);
-    Toolkit::MinMaxButtonsHint(this);
+    ((MainWindow *) m_MainWindow)->m_Toolkit->LineEditBorder(this);
+    ((MainWindow *) m_MainWindow)->m_Toolkit->MinMaxButtonsHint(this);
 }
 
 void RecordDialog::retranslateUi() {

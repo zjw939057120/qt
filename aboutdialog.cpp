@@ -3,6 +3,7 @@
 #include "ui_aboutdialog.h"
 #include "mydefine.h"
 #include "Toolkit.h"
+#include "mainwindow.h"
 
 AboutDialog::AboutDialog(QWidget *parent)
         : QDialog(parent), ui(new Ui::AboutDialog) {
@@ -20,7 +21,7 @@ void AboutDialog::retranslateUi() {
 }
 
 void AboutDialog::Init() {
-    Toolkit::LineEditBorder(this);
+    ((MainWindow *) m_MainWindow)->m_Toolkit->LineEditBorder(this);
 
 }
 

@@ -62,6 +62,7 @@
     <addaction name="actionManual"/>
     <addaction name="actionFAQ"/>
     <addaction name="actionAbout"/>
+    <addaction name="actionDebug"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
@@ -137,6 +138,11 @@
   <action name="actionChinese">
    <property name="text">
     <string>Chinese</string>
+   </property>
+  </action>
+  <action name="actionDebug">
+   <property name="text">
+    <string>Debug</string>
    </property>
   </action>
  </widget>

@@ -2,6 +2,7 @@
 #include "ui_faqdialog.h"
 #include "mydefine.h"
 #include "Toolkit.h"
+#include "mainwindow.h"
 
 FAQDialog::FAQDialog(QWidget *parent)
         : QDialog(parent), ui(new Ui::FAQDialog) {
@@ -19,8 +20,8 @@ void FAQDialog::retranslateUi() {
 }
 
 void FAQDialog::Init() {
-    Toolkit::LineEditBorder(this);
-    Toolkit::MinMaxButtonsHint(this);
+    ((MainWindow *) m_MainWindow)->m_Toolkit->LineEditBorder(this);
+    ((MainWindow *) m_MainWindow)->m_Toolkit->MinMaxButtonsHint(this);
 }
 
 void FAQDialog::on_pushButton_Close_clicked() {

@@ -12,6 +12,7 @@
 #include "revisedialog.h"
 #include "sampledialog.h"
 #include "debugdialog.h"
+#include "Toolkit.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -61,10 +62,13 @@ private slots:
 
     void on_actionAbout_triggered();
 
+    void on_actionDebug_triggered();
+
 public:
     Ui::MainWindow *ui;
 
 public:
+    Toolkit *m_Toolkit;
     AboutDialog *m_AboutDialog;
     FAQDialog *m_FAQDialog;
     ManualDialog *m_ManualDialog;
