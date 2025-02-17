@@ -20,7 +20,7 @@ void SampleDialog::Init() {
     ((MainWindow *) m_MainWindow)->m_Toolkit->MinMaxButtonsHint(this);
 }
 
-void SampleDialog::retranslateUi() {
+void SampleDialog::RetranslateUi() {
     ui->retranslateUi(this);
 }
 

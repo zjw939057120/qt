@@ -21,7 +21,7 @@ void QueueSettingDialog::Init() {
     ((MainWindow *) m_MainWindow)->m_Toolkit->MinMaxButtonsHint(this);
 }
 
-void QueueSettingDialog::retranslateUi() {
+void QueueSettingDialog::RetranslateUi() {
     ui->retranslateUi(this);
 }
 

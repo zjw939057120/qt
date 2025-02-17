@@ -19,7 +19,7 @@ public:
 
     void Init();
 
-    void retranslateUi();
+    void RetranslateUi();
 
 private slots:
 

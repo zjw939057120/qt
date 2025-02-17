@@ -15,7 +15,7 @@ ManualDialog::~ManualDialog() {
     delete ui;
 }
 
-void ManualDialog::retranslateUi() {
+void ManualDialog::RetranslateUi() {
     ui->retranslateUi(this);
 }
 

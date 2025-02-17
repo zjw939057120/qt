@@ -20,7 +20,7 @@ void MethodDialog::Init() {
     ((MainWindow *) m_MainWindow)->m_Toolkit->MinMaxButtonsHint(this);
 }
 
-void MethodDialog::retranslateUi() {
+void MethodDialog::RetranslateUi() {
     ui->retranslateUi(this);
 }
 

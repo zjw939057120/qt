@@ -30,7 +30,7 @@ public:
 
     void Init();
 
-    void retranslateUi(const QString &lang);
+    void RetranslateUi(const QString &lang);
 
 private slots:
 

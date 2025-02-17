@@ -23,6 +23,7 @@ void MainWindow::on_actionMethod_triggered() {
 }
 
 void MainWindow::on_actionQueue_triggered() {
+    m_QueueDialog->DisplayMode(true);
     m_QueueDialog->show();
 }
 
@@ -31,7 +32,8 @@ void MainWindow::on_actionSample_triggered() {
 }
 
 void MainWindow::on_actionRecord_triggered() {
-    m_RecordDialog->show();
+    m_QueueDialog->DisplayMode(false);
+    m_QueueDialog->show();
 }
 
 void MainWindow::on_actionQuit_triggered() {
@@ -51,11 +53,11 @@ void MainWindow::on_actionPaste_triggered() {
 }
 
 void MainWindow::on_actionEnglish_triggered() {
-    retranslateUi("en_US");
+    RetranslateUi("en_US");
 }
 
 void MainWindow::on_actionChinese_triggered() {
-    retranslateUi("zh_CN");
+    RetranslateUi("zh_CN");
 }
 
 void MainWindow::on_actionRevise_triggered() {
@@ -78,21 +80,21 @@ void MainWindow::on_actionDebug_triggered() {
     m_DebugDialog->show();
 }
 
-void MainWindow::retranslateUi(const QString &lang) {
+void MainWindow::RetranslateUi(const QString &lang) {
     QTranslator translator;
     if (translator.load(":/i18n/widget_" + lang)) {
         qApp->installTranslator(&translator);
         ui->retranslateUi(this);
-        m_AboutDialog->retranslateUi();
-        m_FAQDialog->retranslateUi();
-        m_ManualDialog->retranslateUi();
-        m_MethodDialog->retranslateUi();
-        m_QueueDialog->retranslateUi();
-        m_QueueSettingDialog->retranslateUi();
-        m_RecordDialog->retranslateUi();
-        m_ReviseDialog->retranslateUi();
-        m_SampleDialog->retranslateUi();
-        m_DebugDialog->retranslateUi();
+        m_AboutDialog->RetranslateUi();
+        m_FAQDialog->RetranslateUi();
+        m_ManualDialog->RetranslateUi();
+        m_MethodDialog->RetranslateUi();
+        m_QueueDialog->RetranslateUi();
+        m_QueueSettingDialog->RetranslateUi();
+        m_RecordDialog->RetranslateUi();
+        m_ReviseDialog->RetranslateUi();
+        m_SampleDialog->RetranslateUi();
+        m_DebugDialog->RetranslateUi();
     }
 }
 
@@ -113,6 +115,10 @@ void MainWindow::Init() {
     m_Toolkit->LineEditBorder(this);
 #ifdef __linux__
     Utils::windowMinMaxButtonsHint(this);
+#endif
+
+#ifndef _DEBUG_ENV
+    ui->actionDebug->setVisible(false);
 #endif
 
     m_Toolkit->CreatePath(CONFIG_PATH);

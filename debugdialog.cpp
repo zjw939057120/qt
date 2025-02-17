@@ -23,7 +23,7 @@ void DebugDialog::Init() {
     ((MainWindow *) m_MainWindow)->m_Toolkit->MinMaxButtonsHint(this);
 }
 
-void DebugDialog::retranslateUi() {
+void DebugDialog::RetranslateUi() {
     ui->retranslateUi(this);
 }
 

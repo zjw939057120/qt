@@ -15,7 +15,7 @@ FAQDialog::~FAQDialog() {
     delete ui;
 }
 
-void FAQDialog::retranslateUi() {
+void FAQDialog::RetranslateUi() {
     ui->retranslateUi(this);
 }
 

@@ -20,7 +20,7 @@ void ReviseDialog::Init() {
     ((MainWindow *) m_MainWindow)->m_Toolkit->MinMaxButtonsHint(this);
 }
 
-void ReviseDialog::retranslateUi() {
+void ReviseDialog::RetranslateUi() {
     ui->retranslateUi(this);
 }
 

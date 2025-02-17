@@ -20,7 +20,9 @@ public:
 
     void Init();
 
-    void retranslateUi();
+    void RetranslateUi();
+
+    void DisplayMode(bool isQueueMode = true);
 
 
 private slots:

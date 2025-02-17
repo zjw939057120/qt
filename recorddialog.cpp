@@ -20,7 +20,7 @@ void RecordDialog::Init() {
     ((MainWindow *) m_MainWindow)->m_Toolkit->MinMaxButtonsHint(this);
 }
 
-void RecordDialog::retranslateUi() {
+void RecordDialog::RetranslateUi() {
     ui->retranslateUi(this);
 }
 
